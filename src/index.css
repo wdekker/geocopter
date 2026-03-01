@@ -135,3 +135,25 @@ button:focus-visible {
     display: none !important;
   }
 }
+
+/* Landscape Mobile Overrides */
+@media (max-height: 500px) {
+  .responsive-title {
+    font-size: 1.8rem !important;
+    margin-bottom: 5px !important;
+  }
+
+  .responsive-modal {
+    padding: 10px 20px !important;
+    max-height: 95vh !important;
+  }
+
+  .responsive-modal>div {
+    margin-bottom: 10px !important;
+  }
+
+  .responsive-start-btn {
+    padding: 10px 20px !important;
+    font-size: 1.2rem !important;
+  }
+}

@@ -29,6 +29,22 @@ export const StartScreen: React.FC<StartScreenProps> = ({
 }) => {
     const { t, language, setLanguage } = useTranslation();
 
+    const handleStart = () => {
+        try {
+            const docEl = document.documentElement as any;
+            if (docEl.requestFullscreen) {
+                docEl.requestFullscreen().catch((err: any) => console.log(err));
+            } else if (docEl.webkitRequestFullscreen) { // Safari
+                docEl.webkitRequestFullscreen();
+            } else if (docEl.msRequestFullscreen) { // IE11
+                docEl.msRequestFullscreen();
+            }
+        } catch (e) {
+            console.log("Fullscreen API error", e);
+        }
+        onStart(activeRegion, hardcoreMode);
+    };
+
     return (
         <div style={{
             position: 'absolute',
@@ -194,7 +210,8 @@ export const StartScreen: React.FC<StartScreenProps> = ({
 
                 {/* Start Button */}
                 <button
-                    onClick={() => onStart(activeRegion, hardcoreMode)}
+                    className="responsive-start-btn"
+                    onClick={handleStart}
                     style={{
                         padding: '15px 40px',
                         fontSize: '1.5rem',
