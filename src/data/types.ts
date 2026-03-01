@@ -1,0 +1,17 @@
+export interface City {
+    name: string;
+    state?: string;  // State or province, optional for global cities
+    country: string; // Used for "Region/State/Country" depending on scope
+    lat: number;
+    lng: number;
+}
+
+export interface Region {
+    id: string;
+    name: string;
+    center: [number, number]; // [lat, lng]
+    zoom: number; // For initial map zoom
+    bounds: [number, number, number, number]; // [north, south, east, west]
+    proximityScale: number; // Multiplier for visibility/collision thresholds
+    cities: City[];
+}

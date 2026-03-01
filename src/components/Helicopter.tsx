@@ -1,0 +1,172 @@
+import React, { useState, useRef } from 'react';
+import { useMap, useMapEvents } from 'react-leaflet';
+import type { LeafletMouseEvent } from 'leaflet';
+import { useControls } from '../hooks/useControls';
+import type { Aircraft } from '../data/unlockables';
+
+const BASE_SPEED = 0.05; // Base degrees per frame (calibrated for Europe)
+
+interface HelicopterProps {
+    setPosition: React.Dispatch<React.SetStateAction<[number, number]>>;
+    bounds: [number, number, number, number]; // [north, south, east, west]
+    speedScale: number;
+    wrapLongitude?: boolean;
+    aircraft: Aircraft;
+}
+
+export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, speedScale, wrapLongitude = false, aircraft }) => {
+    const map = useMap();
+    const keys = useControls();
+
+    const [scaleX, setScaleX] = useState<number>(1); // 1 = facing left, -1 = facing right
+    const [rotation, setRotation] = useState<number>(0);
+    const targetDestinationRef = useRef<[number, number] | null>(null);
+
+    // Listen for map clicks (works for both mouse and touch)
+    useMapEvents({
+        click(e: LeafletMouseEvent) {
+            targetDestinationRef.current = [e.latlng.lat, e.latlng.lng];
+        },
+    });
+
+    React.useEffect(() => {
+        let animationFrameId: number;
+
+        const gameLoop = () => {
+            setPosition((prevPosition) => {
+                let newLat = prevPosition[0];
+                let newLng = prevPosition[1];
+                let moved = false;
+
+                let curScaleX = scaleX;
+                let curRot = 0;
+
+                const currentSpeed = BASE_SPEED * speedScale;
+
+                // 1. Keyboard Movement overrides Pointer Movement
+                if (keys.a || keys.ArrowLeft || keys.d || keys.ArrowRight || keys.w || keys.ArrowUp || keys.s || keys.ArrowDown) {
+                    targetDestinationRef.current = null; // Clear pointer target if user uses keyboard
+                    if (keys.a || keys.ArrowLeft) {
+                        newLng -= currentSpeed;
+                        curScaleX = 1;
+                        moved = true;
+                    }
+                    if (keys.d || keys.ArrowRight) {
+                        newLng += currentSpeed;
+                        curScaleX = -1;
+                        moved = true;
+                    }
+                    if (keys.w || keys.ArrowUp) {
+                        newLat += currentSpeed;
+                        curRot = 15; // pitch nose up towards North
+                        moved = true;
+                    }
+                    if (keys.s || keys.ArrowDown) {
+                        newLat -= currentSpeed;
+                        curRot = -15; // pitch nose down towards South
+                        moved = true;
+                    }
+                }
+                // 2. Pointer Movement (Fly towards destination)
+                else if (targetDestinationRef.current) {
+                    const [targetLat, targetLng] = targetDestinationRef.current;
+
+                    // Simple vector math to move towards target
+                    const dLat = targetLat - newLat;
+                    const dLng = targetLng - newLng;
+                    const distance = Math.sqrt(dLat * dLat + dLng * dLng);
+
+                    if (distance > currentSpeed) {
+                        // Normalize vector and scale by speed
+                        newLat += (dLat / distance) * currentSpeed;
+                        newLng += (dLng / distance) * currentSpeed;
+                        moved = true;
+
+                        // Visual styling based on direction
+                        if (dLng > 0) curScaleX = -1; // Moving East
+                        else if (dLng < 0) curScaleX = 1; // Moving West
+
+                        if (dLat > 0) curRot = 15; // Moving North
+                        else if (dLat < 0) curRot = -15; // Moving South
+                    } else {
+                        // Arrived at destination
+                        newLat = targetLat;
+                        newLng = targetLng;
+                        targetDestinationRef.current = null;
+                        moved = true; // One final move frame to exact spot
+                    }
+                }
+
+                if (moved) {
+                    setScaleX(curScaleX);
+                    setRotation(curRot);
+                } else {
+                    // Return to level flight if not moving
+                    setRotation(0);
+                }
+
+                // Clamp to boundaries [north, south, east, west]
+                const [northEdge, southEdge, eastEdge, westEdge] = bounds;
+
+                // Prevent overshooting boundaries
+                if (newLat > northEdge) newLat = northEdge;
+                if (newLat < southEdge) newLat = southEdge;
+
+                if (wrapLongitude) {
+                    // Endless horizontal flying: wrap around the anti-meridian
+                    if (newLng > 180) newLng -= 360;
+                    if (newLng < -180) newLng += 360;
+                } else {
+                    if (newLng > eastEdge) newLng = eastEdge;
+                    if (newLng < westEdge) newLng = westEdge;
+                }
+
+                const newPos: [number, number] = [newLat, newLng];
+
+                if (moved) {
+                    // Keep map centered on helicopter
+                    map.panTo(newPos, { animate: false });
+                }
+
+                return newPos;
+            });
+
+            animationFrameId = requestAnimationFrame(gameLoop);
+        };
+
+        animationFrameId = requestAnimationFrame(gameLoop);
+
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [keys, map, setPosition, scaleX, bounds, speedScale, wrapLongitude, aircraft]);
+
+    return (
+        <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: `translate(-50%, -50%)`,
+            zIndex: 1000,
+            pointerEvents: 'none'
+        }}>
+            <div style={{ animation: 'hoverAnim 2s infinite ease-in-out' }}>
+                <div style={{
+                    fontSize: '48px',
+                    transform: `scaleX(${scaleX * aircraft.baseScale}) rotate(${aircraft.baseRotation + (rotation * aircraft.baseScale)}deg)`,
+                    transition: 'transform 0.1s ease-out',
+                    textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+                }}>
+                    {aircraft.sprite}
+                </div>
+            </div>
+            <style>
+                {`
+                @keyframes hoverAnim {
+                    0% { transform: translateY(0px); }
+                    50% { transform: translateY(-8px); }
+                    100% { transform: translateY(0px); }
+                }
+                `}
+            </style>
+        </div>
+    );
+};
