@@ -75,15 +75,21 @@ button:focus-visible {
 /* Mobile Responsive Overrides */
 @media (max-width: 600px) {
   .responsive-modal {
-    width: 90% !important;
+    width: 95% !important;
     min-width: 0 !important;
-    padding: 15px !important;
-    max-height: 85vh !important;
+    padding: 15px 10px !important;
+    max-height: 90vh !important;
     overflow-y: auto !important;
   }
 
+  .responsive-modal>div {
+    margin-bottom: 15px !important;
+    /* squash vertical padding on narrow phones */
+  }
+
   .responsive-title {
-    font-size: 2.5rem !important;
+    font-size: 2.2rem !important;
+    margin-bottom: 10px !important;
   }
 
   .responsive-subtitle {
@@ -130,7 +136,8 @@ button:focus-visible {
   }
 }
 
-@media (max-height: 700px) {
+@media (max-width: 600px),
+(max-height: 700px) {
   .responsive-footer {
     display: none !important;
   }

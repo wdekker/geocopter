@@ -231,30 +231,28 @@ export const StartScreen: React.FC<StartScreenProps> = ({
                 >
                     {t('startFlight')}
                 </button>
-            </div>
-
-            {/* Footer Attributions */}
-            <div className="responsive-footer" style={{
-                position: 'absolute',
-                bottom: '15px',
-                textAlign: 'center',
-                color: '#888',
-                fontSize: '0.85rem'
-            }}>
-                <div>
-                    <a href="https://github.com/wdekker/geocopter" target="_blank" rel="noopener noreferrer" style={{ color: '#4CAF50', textDecoration: 'none', marginLeft: '5px', marginRight: '5px' }}>
-                        Source Code
-                    </a>
-                    |
-                    <a href="https://www.dekker.dev/contact/" target="_blank" rel="noopener noreferrer" style={{ color: '#4CAF50', textDecoration: 'none', marginLeft: '5px' }}>
-                        Contact Willem Dekker
-                    </a>
-                </div>
-                <div style={{ marginTop: '5px' }}>
-                    Inspired by the 1984 classic Commodore 64 game "Topografie Europa" by Cees Kramer (RadarSoft).
-                </div>
-                <div style={{ marginTop: '5px', color: '#666' }}>
-                    Play at <a href="https://geocopter.dekker.dev" style={{ color: '#888', textDecoration: 'underline' }}>geocopter.dekker.dev</a>
+                {/* Footer Attributions */}
+                <div className="responsive-footer" style={{
+                    marginTop: '25px',
+                    textAlign: 'center',
+                    color: '#888',
+                    fontSize: '0.85rem'
+                }}>
+                    <div>
+                        <a href="https://github.com/wdekker/geocopter" target="_blank" rel="noopener noreferrer" style={{ color: '#4CAF50', textDecoration: 'none', marginLeft: '5px', marginRight: '5px' }}>
+                            Source Code
+                        </a>
+                        |
+                        <a href="https://www.dekker.dev/contact/" target="_blank" rel="noopener noreferrer" style={{ color: '#4CAF50', textDecoration: 'none', marginLeft: '5px' }}>
+                            Contact Willem Dekker
+                        </a>
+                    </div>
+                    <div style={{ marginTop: '5px' }}>
+                        Inspired by the 1984 classic Commodore 64 game "Topografie Europa" by Cees Kramer (RadarSoft).
+                    </div>
+                    <div style={{ marginTop: '5px', color: '#666' }}>
+                        Play at <a href="https://geocopter.dekker.dev" style={{ color: '#888', textDecoration: 'underline' }}>geocopter.dekker.dev</a>
+                    </div>
                 </div>
             </div>
         </div>
