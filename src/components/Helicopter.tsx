@@ -40,11 +40,50 @@ export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, spe
             targetDestinationRef.current = null;
         },
         mouseout() {
-            // Failsafe in case pointer leaves the map container while held down
             pointerActiveRef.current = false;
             targetDestinationRef.current = null;
         }
     });
+
+    // Native touch override (Leaflet sometimes swallows touchmove for panning)
+    React.useEffect(() => {
+        const container = map.getContainer();
+
+        const handleTouchStart = (e: TouchEvent) => {
+            if (e.touches.length > 0) {
+                pointerActiveRef.current = true;
+                const touch = e.touches[0];
+                const latlng = map.mouseEventToLatLng(touch as unknown as MouseEvent);
+                targetDestinationRef.current = [latlng.lat, latlng.lng];
+            }
+        };
+
+        const handleTouchMove = (e: TouchEvent) => {
+            if (pointerActiveRef.current && e.touches.length > 0) {
+                const touch = e.touches[0];
+                const latlng = map.mouseEventToLatLng(touch as unknown as MouseEvent);
+                targetDestinationRef.current = [latlng.lat, latlng.lng];
+            }
+        };
+
+        const handleTouchEnd = () => {
+            pointerActiveRef.current = false;
+            targetDestinationRef.current = null;
+        };
+
+        // Use capture phase to intercept before Leaflet's drag handlers stop propagation
+        container.addEventListener('touchstart', handleTouchStart, { passive: true, capture: true });
+        container.addEventListener('touchmove', handleTouchMove, { passive: true, capture: true });
+        container.addEventListener('touchend', handleTouchEnd, { passive: true, capture: true });
+        container.addEventListener('touchcancel', handleTouchEnd, { passive: true, capture: true });
+
+        return () => {
+            container.removeEventListener('touchstart', handleTouchStart, { capture: true });
+            container.removeEventListener('touchmove', handleTouchMove, { capture: true });
+            container.removeEventListener('touchend', handleTouchEnd, { capture: true });
+            container.removeEventListener('touchcancel', handleTouchEnd, { capture: true });
+        };
+    }, [map]);
 
     React.useEffect(() => {
         let animationFrameId: number;
