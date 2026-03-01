@@ -11,7 +11,7 @@ This game is a passionate modern recreation of the classic Commodore 64 game **"
 
 The original C64 game sparked fierce geographic competitions in school classrooms across Europe during the 80s and 90s, where students would race to find locations as fast as possible. This modern, web-based version aims to resurrect that same exciting, educational VIBE for a new generation!
 
-**Built using "Vibe Coding"**: The entire architecture and source code for this revival was written in collaboration with an AI utilizing the **Antigravity IDE**.
+**Built using "Vibe Coding"**: The entire architecture and source code for this revival was written in collaboration with an AI utilizing the **Antigravity IDE** powered by the **Gemini 2.5 Pro** model.
 
 ## Features
 - **Global & Regional Maps:** Fly across "The World" or focus on specific regions like Europe, The Americas, or The Netherlands.

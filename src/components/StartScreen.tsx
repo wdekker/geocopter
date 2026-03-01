@@ -225,7 +225,6 @@ export const StartScreen: React.FC<StartScreenProps> = ({
                 fontSize: '0.85rem'
             }}>
                 <div>
-                    Built with Vibe Coding & Antigravity IDE |
                     <a href="https://github.com/wdekker/geocopter" target="_blank" rel="noopener noreferrer" style={{ color: '#4CAF50', textDecoration: 'none', marginLeft: '5px', marginRight: '5px' }}>
                         Source Code
                     </a>
