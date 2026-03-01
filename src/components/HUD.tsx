@@ -26,7 +26,7 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
     };
 
     return (
-        <div style={{
+        <div className="responsive-hud-container" style={{
             position: 'fixed',
             top: 0,
             left: 0,
@@ -42,8 +42,8 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
             textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
         }}>
             <div>
-                <h1 style={{ margin: 0, fontSize: '2rem' }}>GeoCopter</h1>
-                <h2 style={{ margin: '5px 0', fontSize: '1.5rem', color: '#ffd700' }}>
+                <h1 className="responsive-hud-title" style={{ margin: 0, fontSize: '2rem' }}>GeoCopter</h1>
+                <h2 className="responsive-hud-subtitle" style={{ margin: '5px 0', fontSize: '1.5rem', color: '#ffd700' }}>
                     {t('target')}: {targetCity} ({hardcoreMode ? '???' : (targetState ? `${targetState}, ${targetCountry}` : targetCountry)})
                 </h2>
 
@@ -107,7 +107,7 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
                 )}
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '15px', pointerEvents: 'auto' }}>
+            <div className="responsive-hud-stats" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '15px', pointerEvents: 'auto' }}>
                 <button
                     onClick={onQuit}
                     style={{
@@ -130,7 +130,7 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
                     {t('quitGame')}
                 </button>
 
-                <div style={{
+                <div className="responsive-hud-box" style={{
                     backgroundColor: 'rgba(0,0,0,0.7)',
                     padding: '15px 30px',
                     borderRadius: '12px',
@@ -146,7 +146,7 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
                     </div>
                 </div>
 
-                <div style={{
+                <div className="responsive-hud-box" style={{
                     backgroundColor: 'rgba(0,0,0,0.7)',
                     padding: '15px 30px',
                     borderRadius: '12px',

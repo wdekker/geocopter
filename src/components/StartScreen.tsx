@@ -45,11 +45,11 @@ export const StartScreen: React.FC<StartScreenProps> = ({
             color: 'white',
             fontFamily: 'monospace'
         }}>
-            <h1 style={{ fontSize: '4rem', marginBottom: '20px', textShadow: '2px 2px 4px #000' }}>
+            <h1 className="responsive-title" style={{ fontSize: '4rem', marginBottom: '20px', textShadow: '2px 2px 4px #000' }}>
                 🚁 GeoCopter
             </h1>
 
-            <div style={{
+            <div className="responsive-modal" style={{
                 backgroundColor: '#333',
                 padding: '30px',
                 borderRadius: '10px',
@@ -217,7 +217,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({
             </div>
 
             {/* Footer Attributions */}
-            <div style={{
+            <div className="responsive-footer" style={{
                 position: 'absolute',
                 bottom: '15px',
                 textAlign: 'center',

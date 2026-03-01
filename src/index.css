@@ -18,6 +18,7 @@ a {
   color: #646cff;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
@@ -46,9 +47,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -59,10 +62,76 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
+  }
+}
+
+/* Mobile Responsive Overrides */
+@media (max-width: 600px) {
+  .responsive-modal {
+    width: 90% !important;
+    min-width: 0 !important;
+    padding: 15px !important;
+    max-height: 85vh !important;
+    overflow-y: auto !important;
+  }
+
+  .responsive-title {
+    font-size: 2.5rem !important;
+  }
+
+  .responsive-subtitle {
+    font-size: 1.5rem !important;
+  }
+
+  .responsive-hud-container {
+    flex-direction: column !important;
+    padding: 10px !important;
+  }
+
+  .responsive-hud-stats {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 5px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+  }
+
+  .responsive-hud-box {
+    padding: 5px 10px !important;
+    min-width: 0 !important;
+    flex: 1 !important;
+  }
+
+  .responsive-hud-box div:first-child {
+    font-size: 0.8rem !important;
+  }
+
+  .responsive-hud-box div:last-child {
+    font-size: 1.5rem !important;
+  }
+
+  .responsive-hud-title {
+    font-size: 1.2rem !important;
+    margin: 0 !important;
+  }
+
+  .responsive-hud-subtitle {
+    font-size: 1rem !important;
+    margin: 2px 0 !important;
+    line-height: 1.2 !important;
+  }
+}
+
+@media (max-height: 700px) {
+  .responsive-footer {
+    display: none !important;
   }
 }

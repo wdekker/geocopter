@@ -27,7 +27,7 @@ export const GameOverScreen: React.FC<GameOverScreenProps> = ({ score, bestScore
             color: 'white',
             fontFamily: 'monospace'
         }}>
-            <h1 style={{ fontSize: '5rem', marginBottom: '10px', color: '#ff4444', textShadow: '2px 2px 4px #000' }}>
+            <h1 className="responsive-title" style={{ fontSize: '5rem', marginBottom: '10px', color: '#ff4444', textShadow: '2px 2px 4px #000' }}>
                 {t('gameOver')}
             </h1>
 
@@ -48,7 +48,7 @@ export const GameOverScreen: React.FC<GameOverScreenProps> = ({ score, bestScore
             )}
 
             <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-                <p style={{ fontSize: '2rem', margin: '10px 0', color: '#ccc' }}>
+                <p className="responsive-subtitle" style={{ fontSize: '2rem', margin: '10px 0', color: '#ccc' }}>
                     {t('finalScore')}: <span style={{ color: 'white', fontWeight: 'bold' }}>{score}</span>
                 </p>
                 <p style={{ fontSize: '1.2rem', margin: '0', color: '#888' }}>
