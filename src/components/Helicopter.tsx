@@ -22,11 +22,28 @@ export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, spe
     const [rotation, setRotation] = useState<number>(0);
     const targetDestinationRef = useRef<[number, number] | null>(null);
 
-    // Listen for map clicks (works for both mouse and touch)
+    const pointerActiveRef = useRef<boolean>(false);
+
+    // Listen for map clicks and drags (works for both mouse and touch)
     useMapEvents({
-        click(e: LeafletMouseEvent) {
+        mousedown(e: LeafletMouseEvent) {
+            pointerActiveRef.current = true;
             targetDestinationRef.current = [e.latlng.lat, e.latlng.lng];
         },
+        mousemove(e: LeafletMouseEvent) {
+            if (pointerActiveRef.current) {
+                targetDestinationRef.current = [e.latlng.lat, e.latlng.lng];
+            }
+        },
+        mouseup() {
+            pointerActiveRef.current = false;
+            targetDestinationRef.current = null;
+        },
+        mouseout() {
+            // Failsafe in case pointer leaves the map container while held down
+            pointerActiveRef.current = false;
+            targetDestinationRef.current = null;
+        }
     });
 
     React.useEffect(() => {
