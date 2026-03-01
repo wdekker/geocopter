@@ -1,8 +1,17 @@
 # 🚁 GeoCopter
 
+**[Play GeoCopter directly in your browser!](https://geocopter.dekker.dev)**
+
 A nostalgic, top-down geography flight simulator built with React and Leaflet! Navigate your helicopter across the world map to locate hidden cities before the fuel timer runs out.
 
 ![GeoCopter Screenshot](./public/screenshot.png)
+
+## Origin & Inspiration
+This game is a passionate modern recreation of the classic Commodore 64 game **"Geography Europe"** (Topografie Europa), originally authored by **Cees Kramer** of the legendary Dutch software company **RadarSoft** in 1984. 
+
+The original C64 game sparked fierce geographic competitions in school classrooms across Europe during the 80s and 90s, where students would race to find locations as fast as possible. This modern, web-based version aims to resurrect that same exciting, educational VIBE for a new generation!
+
+**Built using "Vibe Coding"**: The entire architecture and source code for this revival was written in collaboration with an AI utilizing the **Antigravity IDE**.
 
 ## Features
 - **Global & Regional Maps:** Fly across "The World" or focus on specific regions like Europe, The Americas, or The Netherlands.
@@ -28,7 +37,7 @@ A nostalgic, top-down geography flight simulator built with React and Leaflet! N
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/geocopter.git
+   git clone https://github.com/wdekker/geocopter.git
    cd geocopter
    ```
 2. Install dependencies:
@@ -36,7 +45,7 @@ A nostalgic, top-down geography flight simulator built with React and Leaflet! N
    npm install
    ```
 3. Generate the procedural audio assets (only required if modifying sounds):
-   *(Note: Pre-compiled `.wav` files are already located in `public/sounds/`)*
+   *(Note: Pre-compiled `.wav` and `.mp3` files are already located in `public/sounds/`)*
    ```bash
    node generate_sounds.js
    ```
@@ -51,6 +60,10 @@ A nostalgic, top-down geography flight simulator built with React and Leaflet! N
 - **TypeScript**
 - **Leaflet / React-Leaflet** (Map Engine)
 - **Wavefile API** (Procedural Audio generation)
+
+## Contact & Credits
+- **Source Code**: [GitHub Repository](https://github.com/wdekker/geocopter)
+- **Author**: Willem Dekker - [Contact Me](https://www.dekker.dev/contact/)
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE).
