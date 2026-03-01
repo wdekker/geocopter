@@ -26,9 +26,9 @@ export const oceaniaCities: City[] = [
     { name: 'Noumea', country: 'New Caledonia', lat: -22.2711, lng: 166.4416 },
 
     // Polynesia
-    { name: 'Apia', country: 'Samoa', lat: -13.8314, lng: -171.7695 },
-    { name: 'Nuku\'alofa', country: 'Tonga', lat: -21.1394, lng: -175.2018 },
-    { name: 'Papeete', country: 'French Polynesia', lat: -17.5350, lng: -149.5696 },
+    { name: 'Apia', country: 'Samoa', lat: -13.8314, lng: 188.2305 },
+    { name: "Nuku'alofa", country: 'Tonga', lat: -21.1394, lng: 184.7982 },
+    { name: 'Papeete', state: 'French Polynesia', country: 'France', lat: -17.5350, lng: 210.4304 },
     { name: 'Funafuti', country: 'Tuvalu', lat: -8.5204, lng: 179.1962 },
 
     // Micronesia
