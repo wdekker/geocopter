@@ -11,6 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Prevent text selection across the UI */
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 a {

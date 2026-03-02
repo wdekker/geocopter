@@ -184,31 +184,7 @@ export const StartScreen: React.FC<StartScreenProps> = ({
                     </div>
                 </div>
 
-                {/* Hardcore Toggle */}
-                <div style={{ marginBottom: '30px', textAlign: 'left' }}>
-                    <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '1.2rem' }}>
-                        <input
-                            type="checkbox"
-                            checked={hardcoreMode}
-                            onChange={(e) => setHardcoreMode(e.target.checked)}
-                            style={{ margin: '0 10px 0 0', width: '20px', height: '20px' }}
-                        />
-                        {t('hardcoreMode')}
-                    </label>
-                </div>
-
-                {/* High Score Target */}
-                {
-                    highScore > 0 && (
-                        <div style={{ marginBottom: '30px', textAlign: 'center' }}>
-                            <div style={{ fontSize: '1.1rem', color: '#888' }}>
-                                {t('yourBestScore')}: <span style={{ color: '#ffd700', fontWeight: 'bold' }}>{highScore}</span>
-                            </div>
-                        </div>
-                    )
-                }
-
-                {/* Start Button */}
+                {/* Start Button moved UP to ensure visibility on small screens */}
                 <button
                     className="responsive-start-btn"
                     onClick={handleStart}
@@ -223,14 +199,40 @@ export const StartScreen: React.FC<StartScreenProps> = ({
                         cursor: 'pointer',
                         boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
                         transition: 'transform 0.1s, background-color 0.2s',
+                        width: '100%',
+                        marginBottom: '20px'
                     }}
-                    onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#45a049'}
-                    onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#4CAF50'}
-                    onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'}
-                    onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                    onMouseOver={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.backgroundColor = '#45a049'}
+                    onMouseOut={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.backgroundColor = '#4CAF50'}
+                    onMouseDown={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.transform = 'scale(0.95)'}
+                    onMouseUp={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.transform = 'scale(1)'}
                 >
                     {t('startFlight')}
                 </button>
+
+                {/* Hardcore Toggle */}
+                <div style={{ marginBottom: '15px', textAlign: 'left' }}>
+                    <label style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', fontSize: '1.2rem' }}>
+                        <input
+                            type="checkbox"
+                            checked={hardcoreMode}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setHardcoreMode(e.target.checked)}
+                            style={{ margin: '0 10px 0 0', width: '20px', height: '20px' }}
+                        />
+                        {t('hardcoreMode')}
+                    </label>
+                </div>
+
+                {/* High Score Target */}
+                {
+                    highScore > 0 && (
+                        <div style={{ marginBottom: '15px', textAlign: 'center' }}>
+                            <div style={{ fontSize: '1.1rem', color: '#888' }}>
+                                {t('yourBestScore')}: <span style={{ color: '#ffd700', fontWeight: 'bold' }}>{highScore}</span>
+                            </div>
+                        </div>
+                    )
+                }
                 {/* Footer Attributions */}
                 <div className="responsive-footer" style={{
                     marginTop: '25px',

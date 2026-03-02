@@ -170,7 +170,9 @@ export const GameMap: React.FC = () => {
     }, [helicopterPos, currentTarget, assignNewTarget, hardcoreMode, gameState, activeRegion, playSound, t]);
 
     return (
-        <div style={{ height: '100vh', width: '100vw', position: 'relative' }}>
+        <div
+            style={{ height: '100vh', width: '100vw', position: 'relative', touchAction: 'none' }}
+        >
             {gameState === 'MENU' && (
                 <StartScreen
                     onStart={startGame}

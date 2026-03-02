@@ -39,7 +39,8 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
             zIndex: 1000,
             fontFamily: 'sans-serif',
             color: 'white',
-            textShadow: '2px 2px 4px rgba(0,0,0,0.8)'
+            textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
+            touchAction: 'none'
         }}>
             <div>
                 <h1 className="responsive-hud-title" style={{ margin: 0, fontSize: '2rem' }}>GeoCopter</h1>
@@ -122,10 +123,10 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
                         boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
                         transition: 'transform 0.1s ease',
                     }}
-                    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                    onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'}
-                    onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                    onMouseOver={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.transform = 'scale(1.05)'}
+                    onMouseOut={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.transform = 'scale(1)'}
+                    onMouseDown={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.transform = 'scale(0.95)'}
+                    onMouseUp={(e: React.MouseEvent<HTMLButtonElement>) => e.currentTarget.style.transform = 'scale(1.05)'}
                 >
                     {t('quitGame')}
                 </button>
