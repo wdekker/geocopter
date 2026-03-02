@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useMap, useMapEvents } from 'react-leaflet';
 import type { LeafletMouseEvent } from 'leaflet';
 import { useControls } from '../hooks/useControls';
@@ -14,34 +14,35 @@ interface HelicopterProps {
     aircraft: Aircraft;
 }
 
+// Maintain pointer state outside React lifecycle so it survives re-renders when cities are found.
+let globalPointerActive = false;
+let globalTargetDestination: [number, number] | null = null;
+
 export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, speedScale, wrapLongitude = false, aircraft }) => {
     const map = useMap();
     const keys = useControls();
 
     const [scaleX, setScaleX] = useState<number>(1); // 1 = facing left, -1 = facing right
     const [rotation, setRotation] = useState<number>(0);
-    const targetDestinationRef = useRef<[number, number] | null>(null);
-
-    const pointerActiveRef = useRef<boolean>(false);
 
     // Listen for map clicks and drags (works for both mouse and touch)
     useMapEvents({
         mousedown(e: LeafletMouseEvent) {
-            pointerActiveRef.current = true;
-            targetDestinationRef.current = [e.latlng.lat, e.latlng.lng];
+            globalPointerActive = true;
+            globalTargetDestination = [e.latlng.lat, e.latlng.lng];
         },
         mousemove(e: LeafletMouseEvent) {
-            if (pointerActiveRef.current) {
-                targetDestinationRef.current = [e.latlng.lat, e.latlng.lng];
+            if (globalPointerActive) {
+                globalTargetDestination = [e.latlng.lat, e.latlng.lng];
             }
         },
         mouseup() {
-            pointerActiveRef.current = false;
-            targetDestinationRef.current = null;
+            globalPointerActive = false;
+            globalTargetDestination = null;
         },
         mouseout() {
-            pointerActiveRef.current = false;
-            targetDestinationRef.current = null;
+            globalPointerActive = false;
+            globalTargetDestination = null;
         }
     });
 
@@ -51,24 +52,24 @@ export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, spe
 
         const handleTouchStart = (e: TouchEvent) => {
             if (e.touches.length > 0) {
-                pointerActiveRef.current = true;
+                globalPointerActive = true;
                 const touch = e.touches[0];
                 const latlng = map.mouseEventToLatLng(touch as unknown as MouseEvent);
-                targetDestinationRef.current = [latlng.lat, latlng.lng];
+                globalTargetDestination = [latlng.lat, latlng.lng];
             }
         };
 
         const handleTouchMove = (e: TouchEvent) => {
-            if (pointerActiveRef.current && e.touches.length > 0) {
+            if (globalPointerActive && e.touches.length > 0) {
                 const touch = e.touches[0];
                 const latlng = map.mouseEventToLatLng(touch as unknown as MouseEvent);
-                targetDestinationRef.current = [latlng.lat, latlng.lng];
+                globalTargetDestination = [latlng.lat, latlng.lng];
             }
         };
 
         const handleTouchEnd = () => {
-            pointerActiveRef.current = false;
-            targetDestinationRef.current = null;
+            globalPointerActive = false;
+            globalTargetDestination = null;
         };
 
         // Use capture phase to intercept before Leaflet's drag handlers stop propagation
@@ -101,7 +102,7 @@ export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, spe
 
                 // 1. Keyboard Movement overrides Pointer Movement
                 if (keys.a || keys.ArrowLeft || keys.d || keys.ArrowRight || keys.w || keys.ArrowUp || keys.s || keys.ArrowDown) {
-                    targetDestinationRef.current = null; // Clear pointer target if user uses keyboard
+                    globalTargetDestination = null; // Clear pointer target if user uses keyboard
                     if (keys.a || keys.ArrowLeft) {
                         newLng -= currentSpeed;
                         curScaleX = 1;
@@ -124,8 +125,8 @@ export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, spe
                     }
                 }
                 // 2. Pointer Movement (Fly towards destination)
-                else if (targetDestinationRef.current) {
-                    const [targetLat, targetLng] = targetDestinationRef.current;
+                else if (globalTargetDestination) {
+                    const [targetLat, targetLng] = globalTargetDestination;
 
                     // Simple vector math to move towards target
                     const dLat = targetLat - newLat;
@@ -148,7 +149,7 @@ export const Helicopter: React.FC<HelicopterProps> = ({ setPosition, bounds, spe
                         // Arrived at destination
                         newLat = targetLat;
                         newLng = targetLng;
-                        targetDestinationRef.current = null;
+                        globalTargetDestination = null;
                         moved = true; // One final move frame to exact spot
                     }
                 }
