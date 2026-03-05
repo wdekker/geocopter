@@ -1,207 +1,186 @@
 import type { City } from '../types';
 
 export const europeCities: City[] = [
-    // United Kingdom
-    { name: 'London', country: 'United Kingdom', lat: 51.5074, lng: -0.1278 },
-    { name: 'Birmingham', country: 'United Kingdom', lat: 52.4862, lng: -1.8904 },
-    { name: 'Manchester', country: 'United Kingdom', lat: 53.4808, lng: -2.2426 },
-    { name: 'Edinburgh', country: 'United Kingdom', lat: 55.9533, lng: -3.1883 },
-
-    // France
-    { name: 'Paris', country: 'France', lat: 48.8566, lng: 2.3522 },
-    { name: 'Marseille', country: 'France', lat: 43.2965, lng: 5.3698 },
-    { name: 'Lyon', country: 'France', lat: 45.7640, lng: 4.8357 },
-    { name: 'Toulouse', country: 'France', lat: 43.6047, lng: 1.4442 },
-
-    // Germany
-    { name: 'Berlin', country: 'Germany', lat: 52.5200, lng: 13.4050 },
-    { name: 'Munich', country: 'Germany', lat: 48.1351, lng: 11.5820 },
-    { name: 'Frankfurt', country: 'Germany', lat: 50.1109, lng: 8.6821 },
-    { name: 'Hamburg', country: 'Germany', lat: 53.5511, lng: 9.9937 },
-
-    // Italy
-    { name: 'Rome', country: 'Italy', lat: 41.9028, lng: 12.4964 },
-    { name: 'Milan', country: 'Italy', lat: 45.4642, lng: 9.1900 },
-    { name: 'Naples', country: 'Italy', lat: 40.8518, lng: 14.2681 },
-    { name: 'Turin', country: 'Italy', lat: 45.0703, lng: 7.6869 },
-
-    // Spain
-    { name: 'Madrid', country: 'Spain', lat: 40.4168, lng: -3.7038 },
-    { name: 'Barcelona', country: 'Spain', lat: 41.3851, lng: 2.1734 },
-    { name: 'Valencia', country: 'Spain', lat: 39.4699, lng: -0.3774 },
-    { name: 'Seville', country: 'Spain', lat: 37.3891, lng: -5.9845 },
-
-    // Poland
-    { name: 'Warsaw', country: 'Poland', lat: 52.2297, lng: 21.0122 },
-    { name: 'Krakow', country: 'Poland', lat: 50.0647, lng: 19.9450 },
-    { name: 'Lodz', country: 'Poland', lat: 51.7592, lng: 19.4560 },
-    { name: 'Wroclaw', country: 'Poland', lat: 51.1079, lng: 17.0385 },
-
-    // Ukraine
-    { name: 'Kyiv', country: 'Ukraine', lat: 50.4501, lng: 30.5234 },
-    { name: 'Kharkiv', country: 'Ukraine', lat: 49.9935, lng: 36.2304 },
-    { name: 'Odesa', country: 'Ukraine', lat: 46.4825, lng: 30.7233 },
-    { name: 'Dnipro', country: 'Ukraine', lat: 48.4647, lng: 35.0462 },
-
-    // Romania
-    { name: 'Bucharest', country: 'Romania', lat: 44.4268, lng: 26.1025 },
-    { name: 'Cluj-Napoca', country: 'Romania', lat: 46.7712, lng: 23.6236 },
-    { name: 'Timisoara', country: 'Romania', lat: 45.7489, lng: 21.2087 },
-    { name: 'Iasi', country: 'Romania', lat: 47.1585, lng: 27.5902 },
-
-    // Netherlands
-    { name: 'Amsterdam', country: 'Netherlands', lat: 52.3676, lng: 4.9041 },
-    { name: 'Rotterdam', country: 'Netherlands', lat: 51.9225, lng: 4.4792 },
-    { name: 'The Hague', country: 'Netherlands', lat: 52.0705, lng: 4.3007 },
-
-    // Belgium
-    { name: 'Brussels', country: 'Belgium', lat: 50.8503, lng: 4.3517 },
-    { name: 'Antwerp', country: 'Belgium', lat: 51.2194, lng: 4.4025 },
-    { name: 'Ghent', country: 'Belgium', lat: 51.0500, lng: 3.7167 },
-
-    // Greece
-    { name: 'Athens', country: 'Greece', lat: 37.9838, lng: 23.7275 },
-    { name: 'Thessaloniki', country: 'Greece', lat: 40.6401, lng: 22.9444 },
-    { name: 'Patras', country: 'Greece', lat: 38.2466, lng: 21.7346 },
-
-    // Czech Republic
-    { name: 'Prague', country: 'Czech Republic', lat: 50.0755, lng: 14.4378 },
-    { name: 'Brno', country: 'Czech Republic', lat: 49.1951, lng: 16.6068 },
-    { name: 'Ostrava', country: 'Czech Republic', lat: 49.8209, lng: 18.2625 },
-
-    // Portugal
-    { name: 'Lisbon', country: 'Portugal', lat: 38.7223, lng: -9.1393 },
-    { name: 'Porto', country: 'Portugal', lat: 41.1579, lng: -8.6291 },
-    { name: 'Braga', country: 'Portugal', lat: 41.5454, lng: -8.4265 },
-
-    // Sweden
-    { name: 'Stockholm', country: 'Sweden', lat: 59.3293, lng: 18.0686 },
-    { name: 'Gothenburg', country: 'Sweden', lat: 57.7089, lng: 11.9746 },
-    { name: 'Malmo', country: 'Sweden', lat: 55.6050, lng: 13.0038 },
-
-    // Hungary
-    { name: 'Budapest', country: 'Hungary', lat: 47.4979, lng: 19.0402 },
-    { name: 'Debrecen', country: 'Hungary', lat: 47.5316, lng: 21.6273 },
-    { name: 'Szeged', country: 'Hungary', lat: 46.2530, lng: 20.1414 },
-
-    // Austria
-    { name: 'Vienna', country: 'Austria', lat: 48.2082, lng: 16.3738 },
-    { name: 'Graz', country: 'Austria', lat: 47.0707, lng: 15.4395 },
-    { name: 'Linz', country: 'Austria', lat: 48.3069, lng: 14.2858 },
-
-    // Switzerland
-    { name: 'Bern', country: 'Switzerland', lat: 46.9480, lng: 7.4474 },
-    { name: 'Zurich', country: 'Switzerland', lat: 47.3769, lng: 8.5417 },
-    { name: 'Geneva', country: 'Switzerland', lat: 46.2044, lng: 6.1432 },
-    { name: 'Basel', country: 'Switzerland', lat: 47.5596, lng: 7.5886 },
-
-    // Denmark
-    { name: 'Copenhagen', country: 'Denmark', lat: 55.6761, lng: 12.5683 },
-    { name: 'Aarhus', country: 'Denmark', lat: 56.1629, lng: 10.2039 },
-    { name: 'Odense', country: 'Denmark', lat: 55.3959, lng: 10.3883 },
-
-    // Finland
-    { name: 'Helsinki', country: 'Finland', lat: 60.1695, lng: 24.9354 },
-    { name: 'Espoo', country: 'Finland', lat: 60.2055, lng: 24.6559 },
-    { name: 'Tampere', country: 'Finland', lat: 61.4978, lng: 23.7610 },
-
-    // Slovakia
-    { name: 'Bratislava', country: 'Slovakia', lat: 48.1486, lng: 17.1077 },
-    { name: 'Kosice', country: 'Slovakia', lat: 48.7164, lng: 21.2611 },
-    { name: 'Presov', country: 'Slovakia', lat: 48.9984, lng: 21.2339 },
-
-    // Norway
-    { name: 'Oslo', country: 'Norway', lat: 59.9139, lng: 10.7522 },
-    { name: 'Bergen', country: 'Norway', lat: 60.3913, lng: 5.3221 },
-    { name: 'Trondheim', country: 'Norway', lat: 63.4305, lng: 10.3951 },
-
-    // Ireland
-    { name: 'Dublin', country: 'Ireland', lat: 53.3498, lng: -6.2603 },
-    { name: 'Cork', country: 'Ireland', lat: 51.8985, lng: -8.4756 },
-    { name: 'Galway', country: 'Ireland', lat: 53.2707, lng: -9.0568 },
-
-    // Croatia
-    { name: 'Zagreb', country: 'Croatia', lat: 45.8150, lng: 15.9819 },
-    { name: 'Split', country: 'Croatia', lat: 43.5081, lng: 16.4402 },
-    { name: 'Rijeka', country: 'Croatia', lat: 45.3271, lng: 14.4422 },
-
-    // Lithuania
-    { name: 'Vilnius', country: 'Lithuania', lat: 54.6872, lng: 25.2797 },
-    { name: 'Kaunas', country: 'Lithuania', lat: 54.8985, lng: 23.9036 },
-    { name: 'Klaipeda', country: 'Lithuania', lat: 55.7033, lng: 21.1443 },
-
-    // Slovenia
-    { name: 'Ljubljana', country: 'Slovenia', lat: 46.0569, lng: 14.5058 },
-    { name: 'Maribor', country: 'Slovenia', lat: 46.5547, lng: 15.6459 },
-    { name: 'Kranj', country: 'Slovenia', lat: 46.2389, lng: 14.3556 },
-
-    // Latvia
-    { name: 'Riga', country: 'Latvia', lat: 56.9496, lng: 24.1052 },
-    { name: 'Daugavpils', country: 'Latvia', lat: 55.8747, lng: 26.5362 },
-    { name: 'Liepaja', country: 'Latvia', lat: 56.5047, lng: 21.0108 },
-
-    // Estonia
-    { name: 'Tallinn', country: 'Estonia', lat: 59.4370, lng: 24.7536 },
-    { name: 'Tartu', country: 'Estonia', lat: 58.3780, lng: 26.7290 },
-    { name: 'Narva', country: 'Estonia', lat: 59.3797, lng: 28.1791 },
-
-    // Cyprus
-    { name: 'Nicosia', country: 'Cyprus', lat: 35.1856, lng: 33.3823 },
-    { name: 'Limassol', country: 'Cyprus', lat: 34.6748, lng: 33.0385 },
-    { name: 'Larnaca', country: 'Cyprus', lat: 34.9080, lng: 33.6288 },
-
-    // Serbia
-    { name: 'Belgrade', country: 'Serbia', lat: 44.8125, lng: 20.4612 },
-    { name: 'Novi Sad', country: 'Serbia', lat: 45.2671, lng: 19.8335 },
-    { name: 'Nis', country: 'Serbia', lat: 43.3209, lng: 21.8958 },
-
-    // Bosnia and Herzegovina
-    { name: 'Sarajevo', country: 'Bosnia and Herzegovina', lat: 43.8563, lng: 18.4131 },
-    { name: 'Banja Luka', country: 'Bosnia and Herzegovina', lat: 44.7725, lng: 17.1860 },
-    { name: 'Tuzla', country: 'Bosnia and Herzegovina', lat: 44.5328, lng: 18.6656 },
-
-    // Albania
-    { name: 'Tirana', country: 'Albania', lat: 41.3275, lng: 19.8187 },
-    { name: 'Durres', country: 'Albania', lat: 41.3236, lng: 19.4414 },
-    { name: 'Vlore', country: 'Albania', lat: 40.4661, lng: 19.4897 },
-
-    // North Macedonia
-    { name: 'Skopje', country: 'North Macedonia', lat: 42.0003, lng: 21.4284 },
-    { name: 'Bitola', country: 'North Macedonia', lat: 41.0314, lng: 21.3347 },
-    { name: 'Kumanovo', country: 'North Macedonia', lat: 42.1322, lng: 21.7144 },
-
-    // Montenegro
-    { name: 'Podgorica', country: 'Montenegro', lat: 42.4304, lng: 19.2594 },
-    { name: 'Niksic', country: 'Montenegro', lat: 42.7731, lng: 18.9445 },
-    { name: 'Pljevlja', country: 'Montenegro', lat: 43.3567, lng: 19.3584 },
-
-    // Bulgaria
-    { name: 'Sofia', country: 'Bulgaria', lat: 42.6977, lng: 23.3219 },
-    { name: 'Plovdiv', country: 'Bulgaria', lat: 42.1462, lng: 24.7486 },
-    { name: 'Varna', country: 'Bulgaria', lat: 43.2141, lng: 27.9147 },
-
-    // Belarus
-    { name: 'Minsk', country: 'Belarus', lat: 53.9006, lng: 27.5590 },
-    { name: 'Gomel', country: 'Belarus', lat: 52.4345, lng: 30.9754 },
-    { name: 'Vitebsk', country: 'Belarus', lat: 55.1904, lng: 30.2049 },
-
-    // Moldova
-    { name: 'Chisinau', country: 'Moldova', lat: 47.0105, lng: 28.8638 },
-    { name: 'Balti', country: 'Moldova', lat: 47.7617, lng: 27.9289 },
-    { name: 'Tiraspol', country: 'Moldova', lat: 46.8403, lng: 29.6433 },
-
-    // Russia (European Part)
-    { name: 'Moscow', country: 'Russia', lat: 55.7558, lng: 37.6173 },
-    { name: 'St. Petersburg', country: 'Russia', lat: 59.9311, lng: 30.3609 },
-    { name: 'Nizhny Novgorod', country: 'Russia', lat: 56.3269, lng: 44.0059 },
-    { name: 'Kazan', country: 'Russia', lat: 55.8304, lng: 49.0661 },
-
-    // Microstates & Small Nations
-    { name: 'Luxembourg City', country: 'Luxembourg', lat: 49.6117, lng: 6.1319 },
-    { name: 'Valletta', country: 'Malta', lat: 35.8989, lng: 14.5146 },
-    { name: 'Reykjavik', country: 'Iceland', lat: 64.1466, lng: -21.9426 },
-    { name: 'Andorra la Vella', country: 'Andorra', lat: 42.5063, lng: 1.5218 },
-    { name: 'Monaco', country: 'Monaco', lat: 43.7384, lng: 7.4246 },
-    { name: 'San Marino', country: 'San Marino', lat: 43.9424, lng: 12.4578 },
-    { name: 'Vaduz', country: 'Liechtenstein', lat: 47.1415, lng: 9.5215 },
+    { name: "Amsterdam", country: "Netherlands", lat: 52.3676, lng: 4.9041, state: "Noord-Holland", type: "city" },
+    { name: "Rotterdam", country: "Netherlands", lat: 51.9225, lng: 4.47917, state: "Zuid-Holland", type: "city" },
+    { name: "Den Haag", country: "Netherlands", lat: 52.0705, lng: 4.3007, state: "Zuid-Holland", type: "city" },
+    { name: "Utrecht", country: "Netherlands", lat: 52.0907, lng: 5.1214, state: "Utrecht", type: "city" },
+    { name: "Eindhoven", country: "Netherlands", lat: 51.4416, lng: 5.4697, state: "Noord-Brabant", type: "city" },
+    { name: "Groningen", country: "Netherlands", lat: 53.2194, lng: 6.5665, state: "Groningen", type: "city" },
+    { name: "Tilburg", country: "Netherlands", lat: 51.5555, lng: 5.0913, state: "Noord-Brabant", type: "city" },
+    { name: "Almere", country: "Netherlands", lat: 52.3702, lng: 5.2141, state: "Flevoland", type: "city" },
+    { name: "Breda", country: "Netherlands", lat: 51.5719, lng: 4.7683, state: "Noord-Brabant", type: "city" },
+    { name: "Nijmegen", country: "Netherlands", lat: 51.8126, lng: 5.8372, state: "Gelderland", type: "city" },
+    { name: "Apeldoorn", country: "Netherlands", lat: 52.2112, lng: 5.9699, state: "Gelderland", type: "city" },
+    { name: "Haarlem", country: "Netherlands", lat: 52.3874, lng: 4.6462, state: "Noord-Holland", type: "city" },
+    { name: "Arnhem", country: "Netherlands", lat: 51.9851, lng: 5.8987, state: "Gelderland", type: "city" },
+    { name: "Enschede", country: "Netherlands", lat: 52.2215, lng: 6.8937, state: "Overijssel", type: "city" },
+    { name: "Amersfoort", country: "Netherlands", lat: 52.1552, lng: 5.3872, state: "Utrecht", type: "city" },
+    { name: "Zaanstad", country: "Netherlands", lat: 52.4385, lng: 4.8152, state: "Noord-Holland", type: "city" },
+    { name: "Haarlemmermeer", country: "Netherlands", lat: 52.302, lng: 4.6738, state: "Noord-Holland", type: "city" },
+    { name: "Zwolle", country: "Netherlands", lat: 52.5168, lng: 6.083, state: "Overijssel", type: "city" },
+    { name: "Leiden", country: "Netherlands", lat: 52.1601, lng: 4.497, state: "Zuid-Holland", type: "city" },
+    { name: "Zoetermeer", country: "Netherlands", lat: 52.0607, lng: 4.494, state: "Zuid-Holland", type: "city" },
+    { name: "Leeuwarden", country: "Netherlands", lat: 53.2012, lng: 5.7999, state: "Friesland", type: "city" },
+    { name: "Maastricht", country: "Netherlands", lat: 50.8514, lng: 5.691, state: "Limburg", type: "city" },
+    { name: "Dordrecht", country: "Netherlands", lat: 51.8133, lng: 4.6901, state: "Zuid-Holland", type: "city" },
+    { name: "Alphen aan den Rijn", country: "Netherlands", lat: 52.1292, lng: 4.6555, state: "Zuid-Holland", type: "city" },
+    { name: "Middelburg", country: "Netherlands", lat: 51.4988, lng: 3.611, state: "Zeeland", type: "city" },
+    { name: "Assen", country: "Netherlands", lat: 52.9928, lng: 6.5642, state: "Drenthe", type: "city" },
+    { name: "Lelystad", country: "Netherlands", lat: 52.5185, lng: 5.4714, state: "Flevoland", type: "city" },
+    { name: "Alkmaar", country: "Netherlands", lat: 52.6324, lng: 4.7533, state: "Noord-Holland", type: "city" },
+    { name: "Deventer", country: "Netherlands", lat: 52.2533, lng: 6.1552, state: "Overijssel", type: "city" },
+    { name: "Roermond", country: "Netherlands", lat: 51.1913, lng: 5.9878, state: "Limburg", type: "city" },
+    { name: "Venlo", country: "Netherlands", lat: 51.3704, lng: 6.1691, state: "Limburg", type: "city" },
+    { name: "Vlissingen", country: "Netherlands", lat: 51.4533, lng: 3.5786, state: "Zeeland", type: "city" },
+    { name: "Sneek", country: "Netherlands", lat: 53.0325, lng: 5.66, state: "Friesland", type: "city" },
+    { name: "Gouda", country: "Netherlands", lat: 52.0116, lng: 4.7105, state: "Zuid-Holland", type: "city" },
+    { name: "Hoorn", country: "Netherlands", lat: 52.6424, lng: 5.0602, state: "Noord-Holland", type: "city" },
+    { name: "Den Helder", country: "Netherlands", lat: 52.9563, lng: 4.7608, state: "Noord-Holland", type: "city" },
+    { name: "Heerenveen", country: "Netherlands", lat: 52.9622, lng: 5.9189, state: "Friesland", type: "city" },
+    { name: "Emmen", country: "Netherlands", lat: 52.7858, lng: 6.8976, state: "Drenthe", type: "city" },
+    { name: "Hoogeveen", country: "Netherlands", lat: 52.7286, lng: 6.4736, state: "Drenthe", type: "city" },
+    { name: "Almelo", country: "Netherlands", lat: 52.357, lng: 6.6635, state: "Overijssel", type: "city" },
+    { name: "Hengelo", country: "Netherlands", lat: 52.2658, lng: 6.7938, state: "Overijssel", type: "city" },
+    { name: "Helmond", country: "Netherlands", lat: 51.4817, lng: 5.6611, state: "Noord-Brabant", type: "city" },
+    { name: "Oss", country: "Netherlands", lat: 51.767, lng: 5.5272, state: "Noord-Brabant", type: "city" },
+    { name: "Roosendaal", country: "Netherlands", lat: 51.5306, lng: 4.4589, state: "Noord-Brabant", type: "city" },
+    { name: "Sittard", country: "Netherlands", lat: 50.9983, lng: 5.8694, state: "Limburg", type: "city" },
+    { name: "Heerlen", country: "Netherlands", lat: 50.8882, lng: 5.9795, state: "Limburg", type: "city" },
+    { name: "Geleen", country: "Netherlands", lat: 50.9667, lng: 5.8333, state: "Limburg", type: "city" },
+    { name: "Terneuzen", country: "Netherlands", lat: 51.3328, lng: 3.8272, state: "Zeeland", type: "city" },
+    { name: "Goes", country: "Netherlands", lat: 51.5036, lng: 3.8911, state: "Zeeland", type: "city" },
+    { name: "Drachten", country: "Netherlands", lat: 53.11, lng: 6.0983, state: "Friesland", type: "city" },
+    { name: "Hilversum", country: "Netherlands", lat: 52.2292, lng: 5.1764, state: "Noord-Holland", type: "city" },
+    { name: "Amstelveen", country: "Netherlands", lat: 52.3023, lng: 4.864, state: "Noord-Holland", type: "city" },
+    { name: "Purmerend", country: "Netherlands", lat: 52.505, lng: 4.9592, state: "Noord-Holland", type: "city" },
+    { name: "Spijkenisse", country: "Netherlands", lat: 51.8465, lng: 4.3216, state: "Zuid-Holland", type: "city" },
+    { name: "Vlaardingen", country: "Netherlands", lat: 51.9125, lng: 4.3414, state: "Zuid-Holland", type: "city" },
+    { name: "Schiedam", country: "Netherlands", lat: 51.9167, lng: 4.4005, state: "Zuid-Holland", type: "city" },
+    { name: "Ede", country: "Netherlands", lat: 52.0442, lng: 5.6719, state: "Gelderland", type: "city" },
+    { name: "Doesburg", country: "Netherlands", lat: 52.0136, lng: 6.1361, state: "Gelderland", type: "city" },
+    { name: "Kampen", country: "Netherlands", lat: 52.555, lng: 5.9189, state: "Overijssel", type: "city" },
+    { name: "Urk", country: "Netherlands", lat: 52.6636, lng: 5.5997, state: "Flevoland", type: "city" },
+    { name: "Zierikzee", country: "Netherlands", lat: 51.65, lng: 3.9167, state: "Zeeland", type: "city" },
+    { name: "Coevorden", country: "Netherlands", lat: 52.6617, lng: 6.7417, state: "Drenthe", type: "city" },
+    { name: "Meppel", country: "Netherlands", lat: 52.6958, lng: 6.1944, state: "Drenthe", type: "city" },
+    { name: "Veenendaal", country: "Netherlands", lat: 52.025, lng: 5.5556, state: "Utrecht", type: "city" },
+    { name: "Nieuwegein", country: "Netherlands", lat: 52.0314, lng: 5.0931, state: "Utrecht", type: "city" },
+    { name: "Zeist", country: "Netherlands", lat: 52.0886, lng: 5.2325, state: "Utrecht", type: "city" },
+    { name: "Emmeloord", country: "Netherlands", lat: 52.7111, lng: 5.7533, state: "Flevoland", type: "city" },
+    { name: "Dronten", country: "Netherlands", lat: 52.5258, lng: 5.7125, state: "Flevoland", type: "city" },
+    { name: "Zeewolde", country: "Netherlands", lat: 52.3308, lng: 5.5414, state: "Flevoland", type: "city" },
+    { name: "Weert", country: "Netherlands", lat: 51.2514, lng: 5.7061, state: "Limburg", type: "city" },
+    { name: "Venray", country: "Netherlands", lat: 51.5283, lng: 5.9744, state: "Limburg", type: "city" },
+    { name: "Gorinchem", country: "Netherlands", lat: 51.83, lng: 4.9739, state: "Zuid-Holland", type: "city" },
+    { name: "Oosterhout", country: "Netherlands", lat: 51.6444, lng: 4.86, state: "Noord-Brabant", type: "city" },
+    { name: "Bergen op Zoom", country: "Netherlands", lat: 51.4947, lng: 4.2883, state: "Noord-Brabant", type: "city" },
+    { name: "Hulst", country: "Netherlands", lat: 51.2806, lng: 4.0531, state: "Zeeland", type: "city" },
+    { name: "Franeker", country: "Netherlands", lat: 53.1872, lng: 5.5417, state: "Friesland", type: "city" },
+    { name: "Harlingen", country: "Netherlands", lat: 53.1736, lng: 5.4147, state: "Friesland", type: "city" },
+    { name: "Bolsward", country: "Netherlands", lat: 53.0617, lng: 5.5222, state: "Friesland", type: "city" },
+    { name: "Oisterwijk", country: "Netherlands", lat: 51.5819, lng: 5.1972, state: "Noord-Brabant", type: "city" },
+    { name: "Boxtel", country: "Netherlands", lat: 51.5892, lng: 5.3283, state: "Noord-Brabant", type: "city" },
+    { name: "Valkenburg", country: "Netherlands", lat: 50.865, lng: 5.8306, state: "Limburg", type: "city" },
+    { name: "Gulpen", country: "Netherlands", lat: 50.8147, lng: 5.8944, state: "Limburg", type: "city" },
+    { name: "Katwijk", country: "Netherlands", lat: 52.1969, lng: 4.4092, state: "Zuid-Holland", type: "city" },
+    { name: "Zandvoort", country: "Netherlands", lat: 52.3789, lng: 4.5303, state: "Noord-Holland", type: "city" },
+    { name: "Beverwijk", country: "Netherlands", lat: 52.4839, lng: 4.6592, state: "Noord-Holland", type: "city" },
+    { name: "Heemskerk", country: "Netherlands", lat: 52.5117, lng: 4.6728, state: "Noord-Holland", type: "city" },
+    { name: "Castricum", country: "Netherlands", lat: 52.5489, lng: 4.6644, state: "Noord-Holland", type: "city" },
+    { name: "Gennep", country: "Netherlands", lat: 51.6961, lng: 5.9739, state: "Limburg", type: "city" },
+    { name: "Culemborg", country: "Netherlands", lat: 51.9567, lng: 5.2267, state: "Gelderland", type: "city" },
+    { name: "Tiel", country: "Netherlands", lat: 51.8864, lng: 5.4286, state: "Gelderland", type: "city" },
+    { name: "Winterswijk", country: "Netherlands", lat: 51.9725, lng: 6.7192, state: "Gelderland", type: "city" },
+    { name: "Doetinchem", country: "Netherlands", lat: 51.9658, lng: 6.2897, state: "Gelderland", type: "city" },
+    { name: "Hardenberg", country: "Netherlands", lat: 52.5758, lng: 6.6192, state: "Overijssel", type: "city" },
+    { name: "Rijssen", country: "Netherlands", lat: 52.3086, lng: 6.5208, state: "Overijssel", type: "city" },
+    { name: "Grootegast", country: "Netherlands", lat: 53.2142, lng: 6.275, state: "Groningen", type: "city" },
+    { name: "Delfzijl", country: "Netherlands", lat: 53.3303, lng: 6.9189, state: "Groningen", type: "city" },
+    { name: "Appingedam", country: "Netherlands", lat: 53.3211, lng: 6.8569, state: "Groningen", type: "city" },
+    { name: "Winschoten", country: "Netherlands", lat: 53.1436, lng: 7.0353, state: "Groningen", type: "city" },
+    { name: "Veendam", country: "Netherlands", lat: 53.1061, lng: 6.8778, state: "Groningen", type: "city" },
+    { name: "Stadskanaal", country: "Netherlands", lat: 52.9867, lng: 6.9536, state: "Groningen", type: "city" },
+    { name: "Bussum", country: "Netherlands", lat: 52.2736, lng: 5.1611, state: "Noord-Holland", type: "city" },
+    { name: "Naarden", country: "Netherlands", lat: 52.2953, lng: 5.1603, state: "Noord-Holland", type: "city" },
+    { name: "Huizen", country: "Netherlands", lat: 52.2989, lng: 5.2433, state: "Noord-Holland", type: "city" },
+    { name: "Zutphen", country: "Netherlands", lat: 52.14, lng: 6.1961, state: "Gelderland", type: "city" },
+    { name: "Apeldoorn", country: "Netherlands", lat: 52.21, lng: 5.9694, state: "Gelderland", type: "city" },
+    { name: "Nijkerk", country: "Netherlands", lat: 52.2217, lng: 5.4853, state: "Gelderland", type: "city" },
+    { name: "Barneveld", country: "Netherlands", lat: 52.14, lng: 5.5847, state: "Gelderland", type: "city" },
+    { name: "Oude IJsselstreek", country: "Netherlands", lat: 51.8953, lng: 6.3917, state: "Gelderland", type: "city" },
+    { name: "Berkelland", country: "Netherlands", lat: 52.1158, lng: 6.5208, state: "Gelderland", type: "city" },
+    { name: "Sluis", country: "Netherlands", lat: 51.31, lng: 3.3769, state: "Zeeland", type: "city" },
+    { name: "Aalsmeer", country: "Netherlands", lat: 52.2625, lng: 4.7583, state: "Noord-Holland", type: "city" },
+    { name: "Uithoorn", country: "Netherlands", lat: 52.2383, lng: 4.8239, state: "Noord-Holland", type: "city" },
+    { name: "Weesp", country: "Netherlands", lat: 52.3086, lng: 5.0417, state: "Noord-Holland", type: "city" },
+    { name: "Oudewater", country: "Netherlands", lat: 52.0258, lng: 4.8719, state: "Utrecht", type: "city" },
+    { name: "Woerden", country: "Netherlands", lat: 52.0864, lng: 4.8836, state: "Utrecht", type: "city" },
+    { name: "Wijk bij Duurstede", country: "Netherlands", lat: 51.9731, lng: 5.3444, state: "Utrecht", type: "city" },
+    { name: "Geldermalsen", country: "Netherlands", lat: 51.8797, lng: 5.2892, state: "Gelderland", type: "city" },
+    { name: "Zaltbommel", country: "Netherlands", lat: 51.8153, lng: 5.2475, state: "Gelderland", type: "city" },
+    { name: "Oosterbeek", country: "Netherlands", lat: 51.9867, lng: 5.8422, state: "Gelderland", type: "city" },
+    { name: "Zeenaar", country: "Netherlands", lat: 51.9272, lng: 6.075, state: "Gelderland", type: "city" },
+    { name: "Elburg", country: "Netherlands", lat: 52.4489, lng: 5.8336, state: "Gelderland", type: "city" },
+    { name: "Nunspeet", country: "Netherlands", lat: 52.3783, lng: 5.7878, state: "Gelderland", type: "city" },
+    { name: "Putten", country: "Netherlands", lat: 52.26, lng: 5.6083, state: "Gelderland", type: "city" },
+    { name: "Ermelo", country: "Netherlands", lat: 52.2997, lng: 5.6264, state: "Gelderland", type: "city" },
+    { name: "Waal", country: "Netherlands", lat: 51.85, lng: 5.5, state: "Gelderland", type: "river" },
+    { name: "IJsselmeer", country: "Netherlands", lat: 52.75, lng: 5.4, state: "Flevoland", type: "lake" },
+    { name: "Waddenzee", country: "Netherlands", lat: 53.3, lng: 5.3, state: "Friesland", type: "sea" },
+    { name: "Veluwe", country: "Netherlands", lat: 52.2, lng: 5.8, state: "Gelderland", type: "mountain" },
+    { name: "Maas", country: "Netherlands", lat: 51.6, lng: 5.4, type: "river" },
+    { name: "IJssel", country: "Netherlands", lat: 52.268, lng: 6.1233, type: "river" },
+    { name: "Lek", country: "Netherlands", lat: 51.9696, lng: 4.9822, type: "river" },
+    { name: "Merwede", country: "Netherlands", lat: 52.0743, lng: 5.1076, type: "river" },
+    { name: "Linge", country: "Netherlands", lat: 51.9207, lng: 5.4474, type: "river" },
+    { name: "Vecht", country: "Netherlands", lat: 52.2429, lng: 5.0449, type: "river" },
+    { name: "Amstel", country: "Netherlands", lat: 52.3111, lng: 4.9052, type: "river" },
+    { name: "Zaan", country: "Netherlands", lat: 52.4703, lng: 4.8133, type: "river" },
+    { name: "Oude Rijn", country: "Netherlands", lat: 52.1191, lng: 4.6745, type: "river" },
+    { name: "Hollandse IJssel", country: "Netherlands", lat: 52.0089, lng: 4.7943, type: "river" },
+    { name: "Berkel", country: "Netherlands", lat: 51.9934, lng: 4.4787, type: "river" },
+    { name: "Roer", country: "Netherlands", lat: 51.1449, lng: 6.0712, type: "river" },
+    { name: "Dommel", country: "Netherlands", lat: 51.4099, lng: 5.4364, type: "river" },
+    { name: "Gouwe", country: "Netherlands", lat: 52.0605, lng: 4.6614, type: "river" },
+    { name: "Schie", country: "Netherlands", lat: 51.9497, lng: 4.4104, type: "river" },
+    { name: "Markermeer", country: "Netherlands", lat: 52.5462, lng: 5.2428, type: "lake" },
+    { name: "Veluwemeer", country: "Netherlands", lat: 52.4096, lng: 5.718, type: "lake" },
+    { name: "Gooimeer", country: "Netherlands", lat: 52.3165, lng: 5.2055, type: "lake" },
+    { name: "Ketelmeer", country: "Netherlands", lat: 52.5974, lng: 5.6944, type: "lake" },
+    { name: "Tjeukemeer", country: "Netherlands", lat: 52.8946, lng: 5.8051, type: "lake" },
+    { name: "Sneekermeer", country: "Netherlands", lat: 53.0322, lng: 5.7491, type: "lake" },
+    { name: "Heegermeer", country: "Netherlands", lat: 52.9537, lng: 5.5854, type: "lake" },
+    { name: "Fluessen", country: "Netherlands", lat: 52.9337, lng: 5.5255, type: "lake" },
+    { name: "Lauwersmeer", country: "Netherlands", lat: 53.3761, lng: 6.1741, type: "lake" },
+    { name: "Veerse Meer", country: "Netherlands", lat: 51.5489, lng: 3.8341, type: "lake" },
+    { name: "Grevelingenmeer", country: "Netherlands", lat: 51.7356, lng: 3.9656, type: "lake" },
+    { name: "Haringvliet", country: "Netherlands", lat: 51.749, lng: 4.2467, type: "lake" },
+    { name: "Hollands Diep", country: "Netherlands", lat: 51.7187, lng: 4.6357, type: "lake" },
+    { name: "Loosdrechtse Plassen", country: "Netherlands", lat: 52.1866, lng: 5.0485, type: "lake" },
+    { name: "Vinkeveense Plassen", country: "Netherlands", lat: 52.2339, lng: 4.9435, type: "lake" },
+    { name: "Braassemermeer", country: "Netherlands", lat: 52.1952, lng: 4.6543, type: "lake" },
+    { name: "Kagerplassen", country: "Netherlands", lat: 52.2041, lng: 4.5415, type: "lake" },
+    { name: "Kralingse Plas", country: "Netherlands", lat: 51.9347, lng: 4.5151, type: "lake" },
+    { name: "Noordzee", country: "Netherlands", lat: 52.5, lng: 4, type: "sea" },
+    { name: "Oosterschelde", country: "Netherlands", lat: 51.5633, lng: 3.9643, type: "sea" },
+    { name: "Westerschelde", country: "Netherlands", lat: 51.3938, lng: 3.7067, type: "sea" },
+    { name: "Eems", country: "Netherlands", lat: 53.3, lng: 6.9, type: "river" },
+    { name: "Utrechtse Heuvelrug", country: "Netherlands", lat: 52.0287, lng: 5.3949, type: "mountain" },
+    { name: "Vaalserberg", country: "Netherlands", lat: 50.75, lng: 6.02, type: "mountain" },
+    { name: "Keutenberg", country: "Netherlands", lat: 50.84, lng: 5.87, type: "mountain" },
+    { name: "Grebbeberg", country: "Netherlands", lat: 51.9531, lng: 5.5974, type: "mountain" },
+    { name: "Sint Jansberg", country: "Netherlands", lat: 51.7445, lng: 5.9211, type: "mountain" },
+    { name: "Montferland", country: "Netherlands", lat: 51.924, lng: 6.2055, type: "mountain" },
+    { name: "Texel", country: "Netherlands", lat: 53.0893718, lng: 4.8213473, type: "island" },
+    { name: "Vlieland", country: "Netherlands", lat: 53.2556631, lng: 4.9548931, type: "island" },
+    { name: "Terschelling", country: "Netherlands", lat: 53.3947171, lng: 5.2876795, type: "island" },
+    { name: "Ameland", country: "Netherlands", lat: 53.448327, lng: 5.7399613, type: "island" },
+    { name: "Schiermonnikoog", country: "Netherlands", lat: 53.4846304, lng: 6.168636, type: "island" },
+    { name: "Hoge Veluwe", country: "Netherlands", lat: 52.0797059, lng: 5.8310773, type: "national_park" },
+    { name: "Biesbosch", country: "Netherlands", lat: 51.7687956, lng: 4.8950231, type: "national_park" },
+    { name: "Weerribben-Wieden", country: "Netherlands", lat: 52.7292076, lng: 6.025131, type: "national_park" },
+    { name: "Amsterdam-Rijnkanaal", country: "Netherlands", lat: 52.0536237, lng: 5.1036818, type: "canal" },
+    { name: "Noordzeekanaal", country: "Netherlands", lat: 52.4286305, lng: 4.7593459, type: "canal" },
+    { name: "Loonse en Drunense Duinen", country: "Netherlands", lat: 51.6477927, lng: 5.1364834, type: "desert" }
 ];

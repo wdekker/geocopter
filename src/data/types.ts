@@ -4,6 +4,7 @@ export interface City {
     country: string; // Used for "Region/State/Country" depending on scope
     lat: number;
     lng: number;
+    type?: string;   // Distinguishes rivers, mountains, etc. defaults to "city"
 }
 
 export interface Region {

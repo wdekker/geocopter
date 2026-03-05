@@ -8,6 +8,7 @@ interface HUDProps {
     targetCity: string;
     targetState?: string;
     targetCountry: string;
+    targetType?: string;
     message: string;
     hardcoreMode: boolean;
     signalStrength: string;
@@ -15,7 +16,7 @@ interface HUDProps {
     onQuit: () => void;
 }
 
-export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targetState, targetCountry, message, hardcoreMode, signalStrength, bearing, onQuit }) => {
+export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targetState, targetCountry, targetType = 'city', message, hardcoreMode, signalStrength, bearing, onQuit }) => {
     const { t } = useTranslation();
 
     // Format mm:ss
@@ -45,7 +46,7 @@ export const HUD: React.FC<HUDProps> = ({ score, timeRemaining, targetCity, targ
             <div>
                 <h1 className="responsive-hud-title" style={{ margin: 0, fontSize: '2rem' }}>GeoCopter</h1>
                 <h2 className="responsive-hud-subtitle" style={{ margin: '5px 0', fontSize: '1.5rem', color: '#ffd700' }}>
-                    {t('target')}: {targetCity} ({hardcoreMode ? '???' : (targetState ? `${targetState}, ${targetCountry}` : targetCountry)})
+                    {t('target')}: {targetCity}{targetType !== 'city' ? ` (${t((targetType === 'bay' || targetType === 'peninsula' ? 'bays_and_peninsulas' : targetType === 'national_park' ? 'national_parks' : targetType + 's') as TranslationKey)})` : ''} {hardcoreMode ? '(???)' : (targetState ? `(${targetState}, ${targetCountry})` : `(${targetCountry})`)}
                 </h2>
 
                 <div style={{

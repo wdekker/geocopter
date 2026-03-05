@@ -22,7 +22,19 @@ export const translations = {
         newHighScore: "NEW HIGH SCORE!",
         playAgain: "PLAY AGAIN",
         foundCity: "Found {city}!",
-        unlocksAt: "Unlocks at {score} pts"
+        unlocksAt: "Unlocks at {score} pts",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     nl: {
         gameSettings: "Spelinstellingen",
@@ -47,7 +59,19 @@ export const translations = {
         newHighScore: "NIEUWE TOP SCORE!",
         playAgain: "OPNIEUW SPELEN",
         foundCity: "{city} gevonden!",
-        unlocksAt: "Ontgrendelt bij {score} ptn"
+        unlocksAt: "Ontgrendelt bij {score} ptn",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     es: {
         gameSettings: "Ajustes del Juego",
@@ -72,7 +96,19 @@ export const translations = {
         newHighScore: "¡NUEVO RÉCORD!",
         playAgain: "JUGAR DE NUEVO",
         foundCity: "¡Encontraste {city}!",
-        unlocksAt: "Se desbloquea a los {score} pts"
+        unlocksAt: "Se desbloquea a los {score} pts",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     zh: {
         gameSettings: "游戏设置",
@@ -97,7 +133,19 @@ export const translations = {
         newHighScore: "新最高分！",
         playAgain: "再玩一次",
         foundCity: "找到了 {city}！",
-        unlocksAt: "{score} 分解锁"
+        unlocksAt: "{score} 分解锁",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     hi: {
         gameSettings: "गेम सेटिंग्स",
@@ -122,7 +170,19 @@ export const translations = {
         newHighScore: "नया हाई स्कोर!",
         playAgain: "फिर से खेलें",
         foundCity: "{city} मिल गया!",
-        unlocksAt: "{score} अंकों पर अनलॉक"
+        unlocksAt: "{score} अंकों पर अनलॉक",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     ar: {
         gameSettings: "إعدادات اللعبة",
@@ -147,7 +207,19 @@ export const translations = {
         newHighScore: "رقم قياسي جديد!",
         playAgain: "العب مرة أخرى",
         foundCity: "تم العثور على {city}!",
-        unlocksAt: "يفتح عند {score} نقطة"
+        unlocksAt: "يفتح عند {score} نقطة",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     fr: {
         gameSettings: "Paramètres du Jeu",
@@ -172,7 +244,19 @@ export const translations = {
         newHighScore: "NOUVEAU RECORD !",
         playAgain: "REJOUER",
         foundCity: "{city} trouvé(e) !",
-        unlocksAt: "Déblocage à {score} pts"
+        unlocksAt: "Déblocage à {score} pts",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     de: {
         gameSettings: "Spieleinstellungen",
@@ -197,7 +281,19 @@ export const translations = {
         newHighScore: "NEUER HIGHSCORE!",
         playAgain: "NOCHMAL SPIELEN",
         foundCity: "{city} gefunden!",
-        unlocksAt: "Wird ab {score} Pkt. freigeschaltet"
+        unlocksAt: "Wird ab {score} Pkt. freigeschaltet",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     pt: {
         gameSettings: "Configurações do Jogo",
@@ -222,7 +318,19 @@ export const translations = {
         newHighScore: "NOVO RECORDE!",
         playAgain: "JOGAR NOVAMENTE",
         foundCity: "Encontrou {city}!",
-        unlocksAt: "Desbloqueia aos {score} pts"
+        unlocksAt: "Desbloqueia aos {score} pts",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     },
     it: {
         gameSettings: "Impostazioni di Gioco",
@@ -247,7 +355,19 @@ export const translations = {
         newHighScore: "NUOVO RECORD!",
         playAgain: "GIOCA DI NUOVO",
         foundCity: "Trovata {city}!",
-        unlocksAt: "Si sblocca a {score} p.ti"
+        unlocksAt: "Si sblocca a {score} p.ti",
+        settings: "Settings",
+        backToMenu: "Back to Menu",
+        targetTypes: "Target Types",
+        cities: "Cities",
+        rivers: "Rivers",
+        lakesAndSeas: "Lakes & Seas",
+        mountains: "Mountains",
+        islands: "Islands",
+        national_parks: "National Parks",
+        canals: "Canals",
+        bays_and_peninsulas: "Bays & Peninsulas",
+        deserts: "Deserts"
     }
 };
 

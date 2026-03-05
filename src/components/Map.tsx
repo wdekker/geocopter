@@ -65,34 +65,63 @@ export const GameMap: React.FC = () => {
     const [message, setMessage] = useState('');
 
     // Mechanics
-    const [hardcoreMode, setHardcoreMode] = useState(false);
+    const [hardcoreMode, setHardcoreModeState] = useState<boolean>(() => {
+        try {
+            return window.localStorage.getItem('geocopter_hardcore') === 'true';
+        } catch { }
+        return false;
+    });
+
+    const setHardcoreMode = (mode: boolean) => {
+        setHardcoreModeState(mode);
+        try { window.localStorage.setItem('geocopter_hardcore', String(mode)); } catch { }
+    };
+
+    const [categories, setCategoriesState] = useState<string[]>(() => {
+        try {
+            const saved = window.localStorage.getItem('geocopter_categories');
+            if (saved) return JSON.parse(saved);
+        } catch { }
+        return ['city'];
+    });
+
+    const setCategories = (cats: string[]) => {
+        setCategoriesState(cats);
+        try { window.localStorage.setItem('geocopter_categories', JSON.stringify(cats)); } catch { }
+    };
+
     const [showTarget, setShowTarget] = useState(false);
     const [signalStrength, setSignalStrength] = useState('Weak');
     const [bearing, setBearing] = useState(0);
 
-    const assignNewTarget = useCallback((region: Region = activeRegion) => {
-        const availableCities = region.cities;
+    const assignNewTarget = useCallback((region: Region = activeRegion, activeCategories: string[] = categories) => {
+        let availableCities = region.cities.filter(c => activeCategories.includes(c.type || 'city'));
+        if (availableCities.length === 0) availableCities = region.cities; // Failsafe
+
         let newTarget = availableCities[Math.floor(Math.random() * availableCities.length)];
 
         // Ensure we don't get the same target twice in a row if there are multiple
         // Use a generic ref check to avoid stale closures during region switch
         window._lastTargetName = window._lastTargetName || '';
-        while (newTarget.name === window._lastTargetName && availableCities.length > 1) {
+        let attempts = 0;
+        while (newTarget.name === window._lastTargetName && availableCities.length > 1 && attempts < 10) {
             newTarget = availableCities[Math.floor(Math.random() * availableCities.length)];
+            attempts++;
         }
 
         window._lastTargetName = newTarget.name;
         setCurrentTarget(newTarget);
-    }, [activeRegion]);
+    }, [activeRegion, categories]);
 
-    const startGame = (region: Region, hardcore: boolean) => {
+    const startGame = (region: Region, hardcore: boolean, activeCategories: string[]) => {
         setActiveRegion(region);
         setHardcoreMode(hardcore);
+        setCategories(activeCategories);
         setHelicopterPos(region.center);
         setScore(0);
         setIsNewHighScore(false);
         setTimeRemaining(MAX_GAME_TIME_SECONDS);
-        assignNewTarget(region);
+        assignNewTarget(region, activeCategories);
         setMessage('');
         setShowTarget(false);
         setSignalStrength('Weak');
@@ -180,6 +209,8 @@ export const GameMap: React.FC = () => {
                     setActiveRegion={setActiveRegion}
                     hardcoreMode={hardcoreMode}
                     setHardcoreMode={setHardcoreMode}
+                    categories={categories}
+                    setCategories={setCategories}
                     highScore={getBestScore(activeRegion.id, hardcoreMode)}
                     totalCareerScore={getTotalHighScore()}
                     activeAircraft={activeAircraft}
