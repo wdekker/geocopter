@@ -87,4 +87,40 @@ export const africaCities: City[] = [
     { name: 'Blantyre', country: 'Malawi', lat: -15.7861, lng: 35.0058 },
     { name: 'Maseru', country: 'Lesotho', lat: -29.3151, lng: 27.4869 },
     { name: 'Mbabane', country: 'Eswatini', lat: -26.3054, lng: 31.1367 },
+
+    // Mountains
+    { name: "Mount Kilimanjaro", country: "Tanzania", lat: -3.0674, lng: 37.3556, type: "mountain" },
+    { name: "Atlas Mountains", country: "Morocco/Algeria", lat: 31.0538, lng: -7.9150, type: "mountain" },
+    { name: "Mount Kenya", country: "Kenya", lat: -0.1508, lng: 37.3075, type: "mountain" },
+    { name: "Simien Mountains", country: "Ethiopia", lat: 13.1501, lng: 38.3752, type: "mountain" },
+    { name: "Drakensberg", country: "South Africa", lat: -29.2333, lng: 29.3667, type: "mountain" },
+    
+    // Rivers
+    { name: "Nile", country: "Multinational", lat: 30.1667, lng: 31.1000, type: "river" },
+    { name: "Congo River", country: "Multinational", lat: -6.0718, lng: 12.4497, type: "river" },
+    { name: "Niger River", country: "Multinational", lat: 4.3167, lng: 6.0667, type: "river" },
+    { name: "Zambezi", country: "Multinational", lat: -18.8475, lng: 36.3117, type: "river" },
+    { name: "Orange River", country: "South Africa/Namibia", lat: -28.6333, lng: 16.4833, type: "river" },
+
+    // Lakes
+    { name: "Lake Victoria", country: "Tanzania/Uganda/Kenya", lat: -1.0000, lng: 33.0000, type: "lake" },
+    { name: "Lake Tanganyika", country: "Multinational", lat: -5.5000, lng: 29.5000, type: "lake" },
+    { name: "Lake Malawi", country: "Malawi/Tanzania/Mozambique", lat: -12.0000, lng: 34.5000, type: "lake" },
+    { name: "Lake Chad", country: "Multinational", lat: 13.5000, lng: 14.0000, type: "lake" },
+
+    // Islands
+    { name: "Madagascar", country: "Madagascar", lat: -20.0000, lng: 47.0000, type: "island" },
+    { name: "Zanzibar", country: "Tanzania", lat: -6.1306, lng: 39.3148, type: "island" },
+    { name: "Mauritius", country: "Mauritius", lat: -20.3484, lng: 57.5522, type: "island" },
+    { name: "Seychelles", country: "Seychelles", lat: -4.6796, lng: 55.4920, type: "island" },
+    
+    // National Parks
+    { name: "Serengeti", country: "Tanzania", lat: -2.3333, lng: 34.8333, type: "national_park" },
+    { name: "Kruger National Park", country: "South Africa", lat: -23.9884, lng: 31.5547, type: "national_park" },
+    { name: "Victoria Falls", country: "Zimbabwe/Zambia", lat: -17.9243, lng: 25.8560, type: "national_park" },
+
+    // Deserts
+    { name: "Sahara Desert", country: "Multinational", lat: 23.0000, lng: 13.0000, type: "desert" },
+    { name: "Kalahari Desert", country: "Multinational", lat: -23.0000, lng: 22.0000, type: "desert" },
+    { name: "Namib Desert", country: "Namibia", lat: -24.7500, lng: 15.2500, type: "desert" }
 ];

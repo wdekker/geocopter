@@ -90,4 +90,45 @@ export const asiaCities: City[] = [
     { name: 'Tbilisi', country: 'Georgia', lat: 41.7151, lng: 44.8271 },
     { name: 'Baku', country: 'Azerbaijan', lat: 40.4093, lng: 49.8671 },
     { name: 'Yerevan', country: 'Armenia', lat: 40.1872, lng: 44.5152 },
+    
+    // Mountains
+    { name: "Mount Everest", country: "Nepal/China", lat: 27.9881, lng: 86.9250, type: "mountain" },
+    { name: "K2", country: "Pakistan/China", lat: 35.8800, lng: 76.5151, type: "mountain" },
+    { name: "Mount Fuji", country: "Japan", lat: 35.3606, lng: 138.7274, type: "mountain" },
+    { name: "Kangchenjunga", country: "Nepal/India", lat: 27.7025, lng: 88.1475, type: "mountain" },
+    { name: "Mount Kinabalu", country: "Malaysia", lat: 6.0746, lng: 116.5590, type: "mountain" },
+    
+    // Rivers
+    { name: "Yangtze", country: "China", lat: 31.2304, lng: 121.4737, type: "river" },
+    { name: "Ganges", country: "India/Bangladesh", lat: 25.3176, lng: 82.9739, type: "river" },
+    { name: "Mekong", country: "Multinational", lat: 10.3700, lng: 106.3300, type: "river" },
+    { name: "Indus", country: "Pakistan/India", lat: 24.5000, lng: 67.5000, type: "river" },
+    { name: "Yellow River", country: "China", lat: 37.7500, lng: 119.2000, type: "river" },
+
+    // Lakes & Seas
+    { name: "Caspian Sea", country: "Multinational", lat: 41.6600, lng: 50.6600, type: "lake" },
+    { name: "Lake Baikal", country: "Russia", lat: 53.3000, lng: 108.0000, type: "lake" },
+    { name: "Aral Sea", country: "Kazakhstan/Uzbekistan", lat: 45.0000, lng: 60.0000, type: "lake" },
+    { name: "Dead Sea", country: "Jordan/Israel", lat: 31.5000, lng: 35.5000, type: "lake" },
+    { name: "South China Sea", country: "Multinational", lat: 12.0000, lng: 113.0000, type: "sea" },
+    { name: "Sea of Japan", country: "Multinational", lat: 40.0000, lng: 135.0000, type: "sea" },
+
+    // Islands
+    { name: "Honshu", country: "Japan", lat: 36.2048, lng: 138.2529, type: "island" },
+    { name: "Borneo", country: "Indonesia/Malaysia/Brunei", lat: 1.0000, lng: 114.0000, type: "island" },
+    { name: "Sumatra", country: "Indonesia", lat: -0.5897, lng: 101.3431, type: "island" },
+    { name: "Java", country: "Indonesia", lat: -7.5020, lng: 111.2635, type: "island" },
+    { name: "Sri Lanka", country: "Sri Lanka", lat: 7.8731, lng: 80.7718, type: "island" },
+    { name: "Taiwan", country: "Taiwan", lat: 23.6978, lng: 120.9605, type: "island" },
+    { name: "Phuket", country: "Thailand", lat: 7.9519, lng: 98.3381, type: "island" },
+    
+    // National Parks
+    { name: "Komodo", country: "Indonesia", lat: -8.5444, lng: 119.4623, type: "national_park" },
+    { name: "Jiuzhaigou", country: "China", lat: 33.2688, lng: 103.9167, type: "national_park" },
+    { name: "Gunung Leuser", country: "Indonesia", lat: 3.4883, lng: 97.4361, type: "national_park" },
+
+    // Deserts
+    { name: "Gobi Desert", country: "China/Mongolia", lat: 42.5900, lng: 103.4300, type: "desert" },
+    { name: "Arabian Desert", country: "Multinational", lat: 22.0000, lng: 50.0000, type: "desert" },
+    { name: "Thar Desert", country: "India/Pakistan", lat: 26.9600, lng: 71.0100, type: "desert" }
 ];

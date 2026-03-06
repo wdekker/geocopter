@@ -63,4 +63,43 @@ export const americasCities: City[] = [
     { name: 'Belo Horizonte', country: 'Brazil', lat: -19.9208, lng: -43.9378 },
     { name: 'Georgetown', country: 'Guyana', lat: 6.8013, lng: -58.1551 },
     { name: 'Paramaribo', country: 'Suriname', lat: 5.8520, lng: -55.2038 },
+    // Mountains
+    { name: "Aconcagua", country: "Argentina", lat: -32.6532, lng: -70.0109, type: "mountain" },
+    { name: "Denali", country: "United States", lat: 63.0692, lng: -151.0070, type: "mountain" },
+    { name: "Mount Logan", country: "Canada", lat: 60.5670, lng: -140.4055, type: "mountain" },
+    { name: "Pico de Orizaba", country: "Mexico", lat: 19.0305, lng: -97.2698, type: "mountain" },
+    { name: "Mount Whitney", country: "United States", lat: 36.5786, lng: -118.2920, type: "mountain" },
+    
+    // Rivers
+    { name: "Amazon", country: "South America", lat: -3.4653, lng: -62.2159, type: "river" },
+    { name: "Mississippi", country: "United States", lat: 35.5393, lng: -89.9238, type: "river" },
+    { name: "Paraná", country: "South America", lat: -27.4667, lng: -58.8333, type: "river" },
+    { name: "Colorado", country: "United States/Mexico", lat: 36.2163, lng: -112.0620, type: "river" },
+    { name: "Mackenzie", country: "Canada", lat: 65.6560, lng: -128.2323, type: "river" },
+
+    // Lakes & Seas
+    { name: "Lake Superior", country: "Canada/US", lat: 47.7833, lng: -87.5000, type: "lake" },
+    { name: "Lake Huron", country: "Canada/US", lat: 44.8000, lng: -82.4000, type: "lake" },
+    { name: "Lake Michigan", country: "United States", lat: 44.0000, lng: -87.0000, type: "lake" },
+    { name: "Lake Titicaca", country: "Bolivia/Peru", lat: -15.8333, lng: -69.3333, type: "lake" },
+    { name: "Caribbean Sea", country: "Americas", lat: 15.0000, lng: -75.0000, type: "sea" },
+    { name: "Hudson Bay", country: "Canada", lat: 60.0000, lng: -85.0000, type: "sea" },
+
+    // Islands
+    { name: "Greenland", country: "Greenland", lat: 71.7069, lng: -42.6043, type: "island" },
+    { name: "Cuba", country: "Cuba", lat: 21.5218, lng: -77.7812, type: "island" },
+    { name: "Hispaniola", country: "Haiti/Dominican Republic", lat: 18.9712, lng: -70.6580, type: "island" },
+    { name: "Vancouver Island", country: "Canada", lat: 49.6500, lng: -125.4500, type: "island" },
+    { name: "Tierra del Fuego", country: "Argentina/Chile", lat: -54.0000, lng: -69.0000, type: "island" },
+    
+    // National Parks
+    { name: "Yellowstone", country: "United States", lat: 44.4280, lng: -110.5885, type: "national_park" },
+    { name: "Yosemite", country: "United States", lat: 37.8651, lng: -119.5383, type: "national_park" },
+    { name: "Banff", country: "Canada", lat: 51.4968, lng: -115.9281, type: "national_park" },
+    { name: "Torres del Paine", country: "Chile", lat: -51.0000, lng: -73.0000, type: "national_park" },
+
+    // Deserts
+    { name: "Atacama Desert", country: "Chile", lat: -24.5000, lng: -69.2500, type: "desert" },
+    { name: "Sonoran Desert", country: "USA/Mexico", lat: 31.8596, lng: -113.8058, type: "desert" },
+    { name: "Mojave Desert", country: "United States", lat: 35.0110, lng: -115.4734, type: "desert" }
 ];

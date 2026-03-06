@@ -204,4 +204,41 @@ export const europeCities: City[] = [
     { name: 'Monaco', country: 'Monaco', lat: 43.7384, lng: 7.4246 },
     { name: 'San Marino', country: 'San Marino', lat: 43.9424, lng: 12.4578 },
     { name: 'Vaduz', country: 'Liechtenstein', lat: 47.1415, lng: 9.5215 },
+
+    // Mountains
+    { name: "Mont Blanc", country: "France/Italy", lat: 45.8326, lng: 6.8652, type: "mountain" },
+    { name: "Mount Elbrus", country: "Russia", lat: 43.3499, lng: 42.4453, type: "mountain" },
+    { name: "Matterhorn", country: "Switzerland/Italy", lat: 45.9763, lng: 7.6583, type: "mountain" },
+    { name: "Grossglockner", country: "Austria", lat: 47.0742, lng: 12.6947, type: "mountain" },
+    { name: "Mulhacén", country: "Spain", lat: 37.0536, lng: -3.3114, type: "mountain" },
+    
+    // Rivers
+    { name: "Volga", country: "Russia", lat: 56.3269, lng: 44.0059, type: "river" },
+    { name: "Danube", country: "Multinational", lat: 45.1950, lng: 28.0167, type: "river" },
+    { name: "Rhine", country: "Multinational", lat: 50.1109, lng: 8.6821, type: "river" },
+    { name: "Thames", country: "United Kingdom", lat: 51.5074, lng: -0.1278, type: "river" },
+    { name: "Seine", country: "France", lat: 48.8566, lng: 2.3522, type: "river" },
+
+    // Lakes & Seas
+    { name: "Lake Ladoga", country: "Russia", lat: 60.8333, lng: 31.5000, type: "lake" },
+    { name: "Lake Geneva", country: "Switzerland/France", lat: 46.4500, lng: 6.5167, type: "lake" },
+    { name: "Lake Constance", country: "Multinational", lat: 47.6333, lng: 9.3833, type: "lake" },
+    { name: "Loch Ness", country: "United Kingdom", lat: 57.3229, lng: -4.4244, type: "lake" },
+    { name: "Mediterranean Sea", country: "Multinational", lat: 35.0000, lng: 18.0000, type: "sea" },
+    { name: "Baltic Sea", country: "Multinational", lat: 57.0000, lng: 19.0000, type: "sea" },
+
+    // Islands
+    { name: "Sicily", country: "Italy", lat: 37.5990, lng: 14.0154, type: "island" },
+    { name: "Sardinia", country: "Italy", lat: 40.1209, lng: 9.0129, type: "island" },
+    { name: "Corsica", country: "France", lat: 42.0396, lng: 9.0129, type: "island" },
+    { name: "Crete", country: "Greece", lat: 35.2401, lng: 24.8093, type: "island" },
+    { name: "Iceland", country: "Iceland", lat: 64.9631, lng: -19.0208, type: "island" },
+    
+    // National Parks
+    { name: "Plitvice Lakes", country: "Croatia", lat: 44.8654, lng: 15.5820, type: "national_park" },
+    { name: "Triglav", country: "Slovenia", lat: 46.3792, lng: 13.8410, type: "national_park" },
+    { name: "Vatnajökull", country: "Iceland", lat: 64.4220, lng: -16.7909, type: "national_park" },
+
+    // Deserts
+    { name: "Tabernas Desert", country: "Spain", lat: 37.0371, lng: -2.3929, type: "desert" }
 ];
