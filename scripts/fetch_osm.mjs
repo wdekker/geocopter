@@ -114,8 +114,10 @@ async function run() {
         
         console.log(`Fetching ${name}...`);
         
-        // Remove existing arrays from fullStr
-        let cleanBase = fullStr.replace(/,\s*(?:area|line):\s*\[[\s\S]*$/, ''); 
+        // Remove existing arrays from fullStr.
+        // We need a robust multiline regex since the previous script might have added massive arrays.
+        // The arrays always start with `area: [` or `line: [` and end before the `}` of the city object.
+        let cleanBase = fullStr.replace(/,\s*(?:area|line):\s*\[[\s\S]*?(?=\s*\})/g, ''); 
         if (!cleanBase.endsWith('}')) cleanBase += ' }'; 
         
         let queryParams = `q=${encodeURIComponent(name)}`;
@@ -133,7 +135,11 @@ async function run() {
             
             if (data && data.length > 0) {
                 const validCategories = ['waterway', 'natural', 'water', 'boundary', 'leisure', 'place', 'landuse'];
-                let filtered = data.filter(item => validCategories.includes(item.category) || item.type === 'river' || item.type === 'canal' || item.type === 'lake' || item.type === 'national_park');
+                // Only accept ways and relations, nodes are just points without true geometry boundaries
+                let filtered = data.filter(item => 
+                    item.osm_type !== 'node' && 
+                    (validCategories.includes(item.category) || item.type === 'river' || item.type === 'canal' || item.type === 'lake' || item.type === 'national_park')
+                );
                 
                 // Sort by bounding box size (diagonal distance) to get the largest possible representation 
                 // (e.g. the full river relation instead of a small local segment)
@@ -166,8 +172,8 @@ async function run() {
                     if (geo.type === 'LineString') {
                         coords = geo.coordinates;
                     } else if (geo.type === 'MultiLineString') {
-                        // Flatten the segments into a single huge contiguous array
-                        coords = geo.coordinates.flat(1);
+                        // Concatenate all segment arrays into one large array of [lng, lat] pairs
+                        coords = [].concat(...geo.coordinates);
                     } else if (geo.type === 'Polygon') { 
                         coords = geo.coordinates[0];
                     } else if (geo.type === 'MultiPolygon') {
@@ -175,19 +181,24 @@ async function run() {
                     }
                 }
                 
+                
+                // 10km filter MUST check the OSM boundingbox, NOT the extracted parsed local coordinates (because some coords fail extraction)
+                if (bestMatch.boundingbox) {
+                     const [minLat, maxLat, minLng, maxLng] = bestMatch.boundingbox.map(Number);
+                     const sizeKm = getDistanceKm(minLat, minLng, maxLat, maxLng);
+                     if (sizeKm < 10) {
+                          console.log(`  -> Ignored (too small, ${sizeKm.toFixed(1)}km): ${bestMatch.category}/${bestMatch.type}`);
+                          newContent = newContent.replace(fullStr, cleanBase);
+                          continue; // skips to the next feature in the for-loop
+                     }
+                }
+
                 if (coords && coords.length > 0) {
-                    const sizeKm = getBoundingBoxDiagonalKm(coords);
-                    
-                    // Filter out features that are too small to easily click
-                    if (sizeKm < 10) {
-                        console.log(`  -> Ignored (too small, ${sizeKm.toFixed(1)}km): ${bestMatch.category}/${bestMatch.type}`);
-                        continue;
-                    }
-                    
                     const leafletCoords = processCoords(coords);
                     
                     if (leafletCoords.length < 3 && key === 'area') {
                          console.log(`  -> Ignored (too few points after simplify): ${bestMatch.category}/${bestMatch.type}`);
+                         newContent = newContent.replace(fullStr, cleanBase);
                          continue;
                     }
                     
@@ -196,12 +207,15 @@ async function run() {
                     console.log(`  -> Added ${key} with ${leafletCoords.length} points (${bestMatch.category}/${bestMatch.type}).`);
                 } else {
                     console.log(`  -> Invalid geom type: ${geo.type} (${bestMatch.category}/${bestMatch.type})`);
+                    newContent = newContent.replace(fullStr, cleanBase);
                 }
             } else {
                 console.log(`  -> Not found in Nominatim (or no valid category).`);
+                newContent = newContent.replace(fullStr, cleanBase);
             }
         } catch(e) {
             console.error(`  -> Failed: ${e.message}`);
+            newContent = newContent.replace(fullStr, cleanBase);
         }
         
         await delay(1200); 

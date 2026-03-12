@@ -41,7 +41,8 @@ export const oceaniaCities: City[] = [
     { name: "Aoraki / Mount Cook", country: "New Zealand", lat: -43.5950, lng: 170.1418, type: "mountain" },
     { name: "Mount Wilhelm", country: "Papua New Guinea", lat: -5.7808, lng: 145.0322, type: "mountain" },
     { name: "Mount Kosciuszko", country: "Australia", lat: -36.4559, lng: 148.2636, type: "mountain" },
-    { name: "Puncak Jaya", country: "Indonesia (Oceania)", lat: -4.0833, lng: 137.1833, type: "mountain",
+    { name: "Puncak Jaya", country: "Indonesia (Oceania)", lat: -4.0833, lng: 137.1833, type: "mountain"
+   ,
         area: [
             [-3.2660, 137.4351], [-3.2889, 137.4369], [-3.2799, 137.4579], [-3.2860, 137.4657],
             [-3.2996, 137.4598], [-3.3243, 137.4694], [-3.3525, 137.4671], [-3.3574, 137.4595],
@@ -84,7 +85,8 @@ export const oceaniaCities: City[] = [
     { name: "Mount Taranaki", country: "New Zealand", lat: -39.2968, lng: 174.0634, type: "mountain" },
     
     // Rivers
-    { name: "Murray River", country: "Australia", lat: -35.5562, lng: 138.8821, type: "river",
+    { name: "Murray River", country: "Australia", lat: -35.5562, lng: 138.8821, type: "river"
+   ,
         line: [
             [-35.2376, 143.5644], [-35.2320, 143.5784], [-35.2139, 143.5803], [-35.2023, 143.5595],
             [-35.2062, 143.5465], [-35.2161, 143.5438], [-35.2191, 143.5242], [-35.0647, 143.3415],
@@ -380,7 +382,8 @@ export const oceaniaCities: City[] = [
             [-34.5793, 142.7820]
         ]
     },
-    { name: "Darling River", country: "Australia", lat: -34.1130, lng: 141.9056, type: "river",
+    { name: "Darling River", country: "Australia", lat: -34.1130, lng: 141.9056, type: "river"
+   ,
         line: [
             [-29.9581, 146.3082], [-29.9640, 146.3102], [-29.9693, 146.3003], [-29.9736, 146.2639],
             [-29.9658, 146.2628], [-29.9639, 146.2158], [-29.9490, 146.2264], [-29.9438, 146.2133],
@@ -591,7 +594,8 @@ export const oceaniaCities: City[] = [
             [-34.1110, 141.9204], [-34.1118, 141.9064]
         ]
     },
-    { name: "Waikato River", country: "New Zealand", lat: -37.4267, lng: 174.7214, type: "river",
+    { name: "Waikato River", country: "New Zealand", lat: -37.4267, lng: 174.7214, type: "river"
+   ,
         line: [
             [-37.9241, 175.5401], [-37.9445, 175.5664], [-37.9550, 175.6270], [-37.9482, 175.6479],
             [-37.9528, 175.6586], [-38.0182, 175.6530], [-38.0564, 175.6602], [-38.0669, 175.6456],
@@ -622,7 +626,8 @@ export const oceaniaCities: City[] = [
             [-37.9240, 175.5400]
         ]
     },
-    { name: "Sepik River", country: "Papua New Guinea", lat: -3.8406, lng: 144.5361, type: "river",
+    { name: "Sepik River", country: "Papua New Guinea", lat: -3.8406, lng: 144.5361, type: "river"
+   ,
         line: [
             [-5.2270, 141.8929], [-5.2405, 141.8584], [-5.2066, 141.7990], [-5.1970, 141.7535],
             [-5.2078, 141.7430], [-5.2064, 141.6693], [-5.2006, 141.6658], [-5.1867, 141.6763],
@@ -732,7 +737,8 @@ export const oceaniaCities: City[] = [
             [-3.9779, 141.7109]
         ]
     },
-    { name: "Fly River", country: "Papua New Guinea", lat: -8.6256, lng: 143.6067, type: "river",
+    { name: "Fly River", country: "Papua New Guinea", lat: -8.6256, lng: 143.6067, type: "river"
+   ,
         line: [
             [-6.6106, 140.8417], [-6.6218, 140.8771], [-6.6430, 140.8561], [-6.6517, 140.8745],
             [-6.6614, 140.8608], [-6.6805, 140.8686], [-6.6819, 140.8456], [-6.7015, 140.8538],
@@ -775,7 +781,8 @@ export const oceaniaCities: City[] = [
     },
 
     // Lakes & Seas
-    { name: "Lake Eyre", country: "Australia", lat: -28.3667, lng: 137.2833, type: "lake",
+    { name: "Lake Eyre", country: "Australia", lat: -28.3667, lng: 137.2833, type: "lake"
+   ,
         area: [
             [-27.9786, 136.7526], [-27.9908, 136.7610], [-27.9850, 136.7726], [-27.9991, 136.7882],
             [-28.0137, 136.8457], [-28.0300, 136.8573], [-28.0518, 136.8585], [-28.0213, 136.8800],
@@ -881,7 +888,8 @@ export const oceaniaCities: City[] = [
             [-27.9786, 136.7526]
         ]
     },
-    { name: "Lake Taupo", country: "New Zealand", lat: -38.8167, lng: 175.9000, type: "lake",
+    { name: "Lake Taupo", country: "New Zealand", lat: -38.8167, lng: 175.9000, type: "lake"
+   ,
         area: [
             [-38.7799, 175.7293], [-38.7967, 175.7649], [-38.7945, 175.7771], [-38.7839, 175.7855],
             [-38.7816, 175.7800], [-38.7762, 175.7914], [-38.8093, 175.8246], [-38.8158, 175.8090],
@@ -904,7 +912,8 @@ export const oceaniaCities: City[] = [
     },
     { name: "Tasman Sea", country: "Australia/New Zealand", lat: -40.0000, lng: 160.0000, type: "sea" },
     { name: "Coral Sea", country: "Australia/Melanesia", lat: -15.0000, lng: 150.0000, type: "sea" },
-    { name: "Lake Te Anau", country: "New Zealand", lat: -45.2000, lng: 167.8333, type: "lake",
+    { name: "Lake Te Anau", country: "New Zealand", lat: -45.2000, lng: 167.8333, type: "lake"
+   ,
         area: [
             [-45.2966, 167.4266], [-45.3086, 167.4298], [-45.3156, 167.4519], [-45.3030, 167.4841],
             [-45.3056, 167.5028], [-45.3448, 167.5235], [-45.3562, 167.5486], [-45.3510, 167.5822],
@@ -938,7 +947,8 @@ export const oceaniaCities: City[] = [
     },
     
     // Islands
-    { name: "Tasmania", country: "Australia", lat: -41.6401, lng: 146.3159, type: "island",
+    { name: "Tasmania", country: "Australia", lat: -41.6401, lng: 146.3159, type: "island"
+   ,
         area: [
             [-40.5689, 144.5254], [-40.5922, 144.5335], [-40.6110, 144.5572], [-40.6180, 144.5850],
             [-40.6150, 144.6141], [-40.6758, 144.6040], [-40.7360, 144.6128], [-40.7697, 144.6275],
@@ -1009,7 +1019,8 @@ export const oceaniaCities: City[] = [
             [-40.5111, 144.5975], [-40.5268, 144.5517], [-40.5470, 144.5316], [-40.5689, 144.5254]
         ]
     },
-    { name: "South Island", country: "New Zealand", lat: -43.9998, lng: 170.4716, type: "island",
+    { name: "South Island", country: "New Zealand", lat: -43.9998, lng: 170.4716, type: "island"
+   ,
         area: [
             [-45.9046, 166.4256], [-45.9143, 166.4430], [-45.9404, 166.4511], [-45.9985, 166.4499],
             [-46.0123, 166.4720], [-45.9960, 166.4724], [-46.0017, 166.4991], [-45.9939, 166.5278],
@@ -1503,7 +1514,8 @@ export const oceaniaCities: City[] = [
             [-45.8830, 166.4402], [-45.9046, 166.4256]
         ]
     },
-    { name: "North Island", country: "New Zealand", lat: -38.6483, lng: 176.3243, type: "island",
+    { name: "North Island", country: "New Zealand", lat: -38.6483, lng: 176.3243, type: "island"
+   ,
         area: [
             [-34.4762, 172.6430], [-34.4908, 172.6886], [-34.5039, 172.7017], [-34.5245, 172.7048],
             [-34.5303, 172.7314], [-34.6260, 172.8452], [-34.9485, 173.1206], [-35.0391, 173.1675],
@@ -2235,7 +2247,8 @@ export const oceaniaCities: City[] = [
             [-34.4202, 172.6793], [-34.4626, 172.6706], [-34.4762, 172.6430]
         ]
     },
-    { name: "New Guinea", country: "Indonesia/PNG", lat: -5.0000, lng: 141.0000, type: "island",
+    { name: "New Guinea", country: "Indonesia/PNG", lat: -5.0000, lng: 141.0000, type: "island"
+   ,
         area: [
             [-1.4273, 130.9316], [-1.4418, 130.9445], [-1.4573, 130.9970], [-1.4495, 131.0935],
             [-1.4608, 131.1183], [-1.4638, 131.1673], [-1.4704, 131.1766], [-1.4912, 131.1788],
@@ -3363,7 +3376,8 @@ export const oceaniaCities: City[] = [
             [-1.3060, 131.0279], [-1.3176, 131.0144], [-1.3810, 130.9996], [-1.4273, 130.9316]
         ]
     },
-    { name: "Bora Bora", country: "French Polynesia", lat: -16.5004, lng: -151.7415, type: "island",
+    { name: "Bora Bora", country: "French Polynesia", lat: -16.5004, lng: -151.7415, type: "island"
+   ,
         area: [
             [-16.4734, -151.7636], [-16.4873, -151.7432], [-16.4925, -151.7502], [-16.4871, -151.7598],
             [-16.4948, -151.7616], [-16.5191, -151.7324], [-16.5358, -151.7480], [-16.5453, -151.7345],
@@ -3372,7 +3386,8 @@ export const oceaniaCities: City[] = [
             [-16.4734, -151.7636]
         ]
     },
-    { name: "Fiji (Viti Levu)", country: "Fiji", lat: -17.8000, lng: 178.0000, type: "island",
+    { name: "Fiji (Viti Levu)", country: "Fiji", lat: -17.8000, lng: 178.0000, type: "island"
+   ,
         area: [
             [-17.9629, 177.2430], [-17.9722, 177.2621], [-17.9905, 177.2520], [-18.0243, 177.2891],
             [-18.0373, 177.2836], [-18.0424, 177.3035], [-18.0845, 177.2989], [-18.1244, 177.3384],
@@ -3449,7 +3464,8 @@ export const oceaniaCities: City[] = [
     },
 
     // National Parks
-    { name: "Kakadu", country: "Australia", lat: -13.2687, lng: 132.8252, type: "national_park",
+    { name: "Kakadu", country: "Australia", lat: -13.2687, lng: 132.8252, type: "national_park"
+   ,
         area: [
             [-13.1757, 131.8789], [-13.2308, 131.9076], [-13.2743, 131.9094], [-13.2901, 131.9362],
             [-13.3242, 131.9382], [-13.3483, 131.9572], [-13.3966, 131.9684], [-13.4117, 131.9645],
@@ -3479,13 +3495,15 @@ export const oceaniaCities: City[] = [
             [-13.1757, 132.0735], [-13.1757, 131.8789]
         ]
     },
-    { name: "Uluru-Kata Tjuta", country: "Australia", lat: -25.3288, lng: 131.0369, type: "national_park",
+    { name: "Uluru-Kata Tjuta", country: "Australia", lat: -25.3288, lng: 131.0369, type: "national_park"
+   ,
         area: [
             [-25.0817, 130.6667], [-25.4167, 130.6667], [-25.4167, 131.3721], [-25.2667, 131.3723],
             [-25.2667, 130.7500], [-25.1233, 130.7500], [-25.0817, 130.6667]
         ]
     },
-    { name: "Fiordland", country: "New Zealand", lat: -45.4167, lng: 167.7167, type: "national_park",
+    { name: "Fiordland", country: "New Zealand", lat: -45.4167, lng: 167.7167, type: "national_park"
+   ,
         area: [
             [-45.9046, 166.4256], [-45.9143, 166.4430], [-45.9404, 166.4511], [-45.9985, 166.4499],
             [-46.0123, 166.4720], [-45.9960, 166.4724], [-46.0017, 166.4991], [-45.9939, 166.5278],
@@ -3648,7 +3666,8 @@ export const oceaniaCities: City[] = [
 
     // Deserts
     { name: "Great Victoria Desert", country: "Australia", lat: -28.3183, lng: 128.5202, type: "desert" },
-    { name: "Great Sandy Desert", country: "Australia", lat: -20.6667, lng: 124.2500, type: "desert",
+    { name: "Great Sandy Desert", country: "Australia", lat: -20.6667, lng: 124.2500, type: "desert"
+   ,
         area: [
             [19.6697, 44.0871], [19.6432, 44.1060], [19.6478, 44.1180], [19.6267, 44.1541],
             [19.6196, 44.1496], [19.6164, 44.1561], [19.6251, 44.1644], [19.6206, 44.1743],
@@ -3941,7 +3960,8 @@ export const oceaniaCities: City[] = [
             [19.7034, 44.1300], [19.6972, 44.1115], [19.6697, 44.0871]
         ]
     },
-    { name: "Simpson Desert", country: "Australia", lat: -24.5760, lng: 137.4087, type: "desert",
+    { name: "Simpson Desert", country: "Australia", lat: -24.5760, lng: 137.4087, type: "desert"
+   ,
         area: [
             [-24.8526, 133.9586], [-24.8843, 133.9699], [-24.9030, 134.0204], [-24.9711, 134.1275],
             [-25.0251, 134.1997], [-25.0691, 134.2435], [-25.0999, 134.2643], [-25.1986, 134.3004],

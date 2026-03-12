@@ -206,7 +206,8 @@ export const europeCities: City[] = [
     { name: 'Vaduz', country: 'Liechtenstein', lat: 47.1415, lng: 9.5215 },
 
     // Mountains
-    { name: "Mont Blanc", country: "France/Italy", lat: 45.8326, lng: 6.8652, type: "mountain",
+    { name: "Mont Blanc", country: "France/Italy", lat: 45.8326, lng: 6.8652, type: "mountain"
+   ,
         area: [
             [46.0381, -74.5556], [46.0268, -74.4307], [46.0187, -74.4079], [46.0540, -74.3991],
             [46.0556, -74.4161], [46.0713, -74.4129], [46.0683, -74.3963], [46.1274, -74.3803],
@@ -219,7 +220,8 @@ export const europeCities: City[] = [
     { name: "Mulhacén", country: "Spain", lat: 37.0536, lng: -3.3114, type: "mountain" },
     
     // Rivers
-    { name: "Volga", country: "Russia", lat: 56.3269, lng: 44.0059, type: "river",
+    { name: "Volga", country: "Russia", lat: 56.3269, lng: 44.0059, type: "river"
+   ,
         line: [
             [57.2513, 32.4680], [57.2521, 32.4865], [57.2350, 32.5116], [57.2426, 32.5455],
             [57.2315, 32.5815], [57.2013, 32.5915], [57.1901, 32.6099], [57.1816, 32.5954],
@@ -393,7 +395,8 @@ export const europeCities: City[] = [
             [58.1069, 38.6781], [58.0912, 38.7410], [57.5191, 38.2771], [57.5401, 38.3178]
         ]
     },
-    { name: "Danube", country: "Multinational", lat: 45.1950, lng: 28.0167, type: "river",
+    { name: "Danube", country: "Multinational", lat: 45.1950, lng: 28.0167, type: "river"
+   ,
         line: [
             [47.9503, 8.5174], [47.9489, 8.5416], [47.9237, 8.5576], [47.9123, 8.5786],
             [47.9191, 8.5956], [47.9178, 8.6609], [47.9385, 8.7426], [47.9296, 8.7587],
@@ -644,7 +647,8 @@ export const europeCities: City[] = [
             [48.5207, 13.7046], [48.5168, 13.7149]
         ]
     },
-    { name: "Rhine", country: "Multinational", lat: 50.1109, lng: 8.6821, type: "river",
+    { name: "Rhine", country: "Multinational", lat: 50.1109, lng: 8.6821, type: "river"
+   ,
         line: [
             [46.7498, 9.0386], [46.7573, 9.0862], [46.7745, 9.1312], [46.7703, 9.1848],
             [46.7859, 9.2410], [46.7832, 9.2584], [46.7969, 9.2814], [46.7944, 9.2983],
@@ -759,7 +763,8 @@ export const europeCities: City[] = [
             [51.8046, 4.2674], [51.8022, 4.2958], [51.8371, 4.4326]
         ]
     },
-    { name: "Thames", country: "United Kingdom", lat: 51.5074, lng: -0.1278, type: "river",
+    { name: "Thames", country: "United Kingdom", lat: 51.5074, lng: -0.1278, type: "river"
+   ,
         line: [
             [51.6460, -1.9452], [51.4137, -0.5006], [51.4175, -0.5128], [51.4310, -0.5117],
             [51.4515, -0.5725], [51.4725, -0.5631], [51.4702, -0.5831], [51.4807, -0.5815],
@@ -823,7 +828,8 @@ export const europeCities: City[] = [
             [51.5512, -0.7938], [51.4107, -0.5009]
         ]
     },
-    { name: "Seine", country: "France", lat: 48.8566, lng: 2.3522, type: "river",
+    { name: "Seine", country: "France", lat: 48.8566, lng: 2.3522, type: "river"
+   ,
         line: [
             [47.4859, 4.7170], [47.5141, 4.7104], [47.5315, 4.6951], [47.5649, 4.7153],
             [47.6002, 4.6798], [47.6140, 4.6749], [47.6421, 4.6883], [47.6648, 4.6696],
@@ -926,7 +932,8 @@ export const europeCities: City[] = [
     },
 
     // Lakes & Seas
-    { name: "Lake Ladoga", country: "Russia", lat: 60.8333, lng: 31.5000, type: "lake",
+    { name: "Lake Ladoga", country: "Russia", lat: 60.8333, lng: 31.5000, type: "lake"
+   ,
         area: [
             [61.2207, 29.7872], [61.2168, 29.8152], [61.2060, 29.8208], [61.1866, 29.8827],
             [61.1810, 29.8853], [61.1799, 29.8766], [61.1754, 29.8821], [61.1781, 29.9023],
@@ -1076,7 +1083,8 @@ export const europeCities: City[] = [
             [61.2207, 29.7872]
         ]
     },
-    { name: "Lake Geneva", country: "Switzerland/France", lat: 46.4500, lng: 6.5167, type: "lake",
+    { name: "Lake Geneva", country: "Switzerland/France", lat: 46.4500, lng: 6.5167, type: "lake"
+   ,
         area: [
             [46.2069, 6.1480], [46.2123, 6.1730], [46.2156, 6.1687], [46.2382, 6.1933],
             [46.2640, 6.1983], [46.2656, 6.2100], [46.2891, 6.2355], [46.3500, 6.2768],
@@ -1092,7 +1100,8 @@ export const europeCities: City[] = [
             [46.2728, 6.1714], [46.2513, 6.1517], [46.2119, 6.1547], [46.2069, 6.1480]
         ]
     },
-    { name: "Lake Constance", country: "Multinational", lat: 47.6333, lng: 9.3833, type: "lake",
+    { name: "Lake Constance", country: "Multinational", lat: 47.6333, lng: 9.3833, type: "lake"
+   ,
         area: [
             [47.6577, 8.8587], [47.6434, 8.9041], [47.6755, 9.0178], [47.6754, 9.0855],
             [47.6666, 9.0963], [47.6631, 9.1394], [47.6689, 9.1697], [47.6497, 9.1894],
@@ -1116,7 +1125,8 @@ export const europeCities: City[] = [
             [47.6869, 8.9985], [47.6591, 8.9381], [47.6521, 8.8950], [47.6577, 8.8587]
         ]
     },
-    { name: "Loch Ness", country: "United Kingdom", lat: 57.3229, lng: -4.4244, type: "lake",
+    { name: "Loch Ness", country: "United Kingdom", lat: 57.3229, lng: -4.4244, type: "lake"
+   ,
         area: [
             [57.1474, -4.6756], [57.1391, -4.6667], [57.2571, -4.5004], [57.2574, -4.4892],
             [57.3795, -4.3353], [57.3871, -4.3478], [57.4075, -4.3275], [57.3959, -4.3582],
@@ -1129,7 +1139,8 @@ export const europeCities: City[] = [
     { name: "Baltic Sea", country: "Multinational", lat: 57.0000, lng: 19.0000, type: "sea" },
 
     // Islands
-    { name: "Sicily", country: "Italy", lat: 37.5990, lng: 14.0154, type: "island",
+    { name: "Sicily", country: "Italy", lat: 37.5990, lng: 14.0154, type: "island"
+   ,
         area: [
             [37.8021, 12.4242], [37.7834, 12.4348], [37.7939, 12.4332], [37.7735, 12.4550],
             [37.7424, 12.4719], [37.7197, 12.4668], [37.7101, 12.4753], [37.7051, 12.4698],
@@ -1220,7 +1231,8 @@ export const europeCities: City[] = [
             [37.8021, 12.4242]
         ]
     },
-    { name: "Sardinia", country: "Italy", lat: 40.1209, lng: 9.0129, type: "island",
+    { name: "Sardinia", country: "Italy", lat: 40.1209, lng: 9.0129, type: "island"
+   ,
         area: [
             [40.7328, 8.1308], [40.7144, 8.1634], [40.6946, 8.1751], [40.6853, 8.2050],
             [40.6770, 8.1957], [40.6366, 8.1848], [40.6338, 8.1608], [40.6279, 8.1621],
@@ -1348,7 +1360,8 @@ export const europeCities: City[] = [
             [40.7948, 8.1614], [40.7666, 8.1669], [40.7487, 8.1573], [40.7328, 8.1308]
         ]
     },
-    { name: "Corsica", country: "France", lat: 42.0396, lng: 9.0129, type: "island",
+    { name: "Corsica", country: "France", lat: 42.0396, lng: 9.0129, type: "island"
+   ,
         area: [
             [42.2371, 8.5399], [42.2268, 8.5539], [42.2292, 8.5731], [42.2195, 8.5669],
             [42.2143, 8.5783], [42.2132, 8.5685], [42.2054, 8.5664], [42.2060, 8.5821],
@@ -1432,7 +1445,8 @@ export const europeCities: City[] = [
             [42.2664, 8.6953], [42.2371, 8.5399]
         ]
     },
-    { name: "Crete", country: "Greece", lat: 35.2401, lng: 24.8093, type: "island",
+    { name: "Crete", country: "Greece", lat: 35.2401, lng: 24.8093, type: "island"
+   ,
         area: [
             [35.5811, 23.3726], [35.5513, 23.3799], [35.5267, 23.3989], [35.5091, 23.4273],
             [35.5008, 23.4622], [35.4452, 23.4550], [35.4014, 23.4338], [35.3522, 23.4299],
@@ -1472,7 +1486,8 @@ export const europeCities: City[] = [
             [35.6435, 23.4018], [35.6147, 23.3806], [35.5811, 23.3726]
         ]
     },
-    { name: "Iceland", country: "Iceland", lat: 64.9631, lng: -19.0208, type: "island",
+    { name: "Iceland", country: "Iceland", lat: 64.9631, lng: -19.0208, type: "island"
+   ,
         area: [
             [67.1510, -19.1995], [67.1130, -19.1897], [67.0730, -19.1591], [67.0380, -19.1115],
             [67.0080, -19.0491], [66.9640, -18.8835], [66.9480, -18.6888], [66.9630, -18.4865],
@@ -1485,7 +1500,8 @@ export const europeCities: City[] = [
     },
     
     // National Parks
-    { name: "Plitvice Lakes", country: "Croatia", lat: 44.8654, lng: 15.5820, type: "national_park",
+    { name: "Plitvice Lakes", country: "Croatia", lat: 44.8654, lng: 15.5820, type: "national_park"
+   ,
         area: [
             [44.9224, 15.4539], [44.8966, 15.4912], [44.8649, 15.5001], [44.8472, 15.4905],
             [44.8079, 15.5149], [44.7808, 15.5199], [44.7319, 15.6105], [44.7632, 15.6664],
@@ -1496,7 +1512,8 @@ export const europeCities: City[] = [
         ]
     },
     { name: "Triglav", country: "Slovenia", lat: 46.3792, lng: 13.8410, type: "national_park" },
-    { name: "Vatnajökull", country: "Iceland", lat: 64.4220, lng: -16.7909, type: "national_park",
+    { name: "Vatnajökull", country: "Iceland", lat: 64.4220, lng: -16.7909, type: "national_park"
+   ,
         area: [
             [64.3226, -18.1511], [64.3181, -18.1400], [64.3099, -18.1491], [64.3059, -18.1323],
             [64.2967, -18.1493], [64.2870, -18.1497], [64.2764, -18.1327], [64.2693, -18.1395],
@@ -1637,7 +1654,8 @@ export const europeCities: City[] = [
     },
 
     // Deserts
-    { name: "Tabernas Desert", country: "Spain", lat: 37.0371, lng: -2.3929, type: "desert",
+    { name: "Tabernas Desert", country: "Spain", lat: 37.0371, lng: -2.3929, type: "desert"
+   ,
         area: [
             [37.0817, -2.5874], [37.0559, -2.5684], [37.0485, -2.5763], [37.0313, -2.5733],
             [37.0408, -2.5565], [37.0438, -2.5057], [37.0085, -2.5048], [36.9863, -2.4675],

@@ -65,7 +65,8 @@ export const americasCities: City[] = [
     { name: 'Paramaribo', country: 'Suriname', lat: 5.8520, lng: -55.2038 },
     // Mountains
     { name: "Aconcagua", country: "Argentina", lat: -32.6532, lng: -70.0109, type: "mountain" },
-    { name: "Denali", country: "United States", lat: 63.0692, lng: -151.0070, type: "mountain",
+    { name: "Denali", country: "United States", lat: 63.0692, lng: -151.0070, type: "mountain"
+   ,
         area: [
             [62.7274, -153.0013], [62.7230, -151.8931], [62.7982, -151.8845], [63.3332, -149.4995],
             [63.3332, -149.1741], [63.3710, -149.1227], [63.3332, -149.1146], [63.3308, -148.0359],
@@ -88,7 +89,8 @@ export const americasCities: City[] = [
     { name: "Mount Whitney", country: "United States", lat: 36.5786, lng: -118.2920, type: "mountain" },
     
     // Rivers
-    { name: "Amazon", country: "South America", lat: -3.4653, lng: -62.2159, type: "river",
+    { name: "Amazon", country: "South America", lat: -3.4653, lng: -62.2159, type: "river"
+   ,
         line: [
             [-1.5791, -52.6832], [-1.5551, -52.6623], [-1.5389, -52.6295], [-1.5396, -52.5529],
             [-1.4468, -52.4031], [-1.4313, -52.3682], [-1.4107, -52.2769], [-1.3579, -52.1845],
@@ -243,7 +245,8 @@ export const americasCities: City[] = [
             [-1.1663, -51.8820]
         ]
     },
-    { name: "Mississippi", country: "United States", lat: 35.5393, lng: -89.9238, type: "river",
+    { name: "Mississippi", country: "United States", lat: 35.5393, lng: -89.9238, type: "river"
+   ,
         line: [
             [39.3495, -90.8540], [39.3768, -90.8811], [39.3732, -90.9024], [39.3923, -90.9521],
             [39.4153, -90.9717], [39.4484, -91.0383], [39.4689, -91.0594], [39.4941, -91.0654],
@@ -504,7 +507,8 @@ export const americasCities: City[] = [
             [40.1461, -91.5155], [40.1329, -91.5107]
         ]
     },
-    { name: "Paraná", country: "South America", lat: -27.4667, lng: -58.8333, type: "river",
+    { name: "Paraná", country: "South America", lat: -27.4667, lng: -58.8333, type: "river"
+   ,
         line: [
             [-23.8693, -54.0884], [-23.8919, -54.0821], [-23.9551, -54.1021], [-23.9802, -54.1268],
             [-24.0031, -54.1779], [-24.0399, -54.2227], [-24.0288, -54.2222], [-23.9928, -54.1867],
@@ -657,7 +661,8 @@ export const americasCities: City[] = [
             [-22.7643, -53.2813], [-22.7986, -53.3399], [-22.8047, -53.3774]
         ]
     },
-    { name: "Colorado", country: "United States/Mexico", lat: 36.2163, lng: -112.0620, type: "river",
+    { name: "Colorado", country: "United States/Mexico", lat: 36.2163, lng: -112.0620, type: "river"
+   ,
         line: [
             [40.4753, -105.8240], [40.4538, -105.8471], [40.4392, -105.8520], [40.3832, -105.8495],
             [40.3784, -105.8577], [40.3507, -105.8609], [40.3223, -105.8528], [40.3136, -105.8609],
@@ -861,7 +866,8 @@ export const americasCities: City[] = [
             [32.8297, -114.4897], [32.8831, -114.4669], [32.8648, -114.4720]
         ]
     },
-    { name: "Mackenzie", country: "Canada", lat: 65.6560, lng: -128.2323, type: "river",
+    { name: "Mackenzie", country: "Canada", lat: 65.6560, lng: -128.2323, type: "river"
+   ,
         line: [
             [60.0005, -120.0014], [58.0580, -120.0013], [58.0766, -116.9480], [58.0534, -116.9837],
             [58.0516, -117.0671], [58.0426, -117.0894], [58.0192, -117.1093], [57.9912, -117.1124],
@@ -881,7 +887,8 @@ export const americasCities: City[] = [
     },
 
     // Lakes & Seas
-    { name: "Lake Superior", country: "Canada/US", lat: 47.7833, lng: -87.5000, type: "lake",
+    { name: "Lake Superior", country: "Canada/US", lat: 47.7833, lng: -87.5000, type: "lake"
+   ,
         area: [
             [46.7880, -92.0942], [46.7573, -92.0754], [46.7117, -92.0280], [46.6841, -91.9677],
             [46.6788, -91.9431], [46.6921, -91.8665], [46.6913, -91.8084], [46.7545, -91.5894],
@@ -1124,7 +1131,8 @@ export const americasCities: City[] = [
             [46.9262, -91.8382], [46.9057, -91.8817], [46.7880, -92.0942]
         ]
     },
-    { name: "Lake Huron", country: "Canada/US", lat: 44.8000, lng: -82.4000, type: "lake",
+    { name: "Lake Huron", country: "Canada/US", lat: 44.8000, lng: -82.4000, type: "lake"
+   ,
         area: [
             [45.7896, -84.7731], [45.7828, -84.7513], [45.7871, -84.7265], [45.7662, -84.7206],
             [45.7089, -84.5571], [45.6974, -84.5513], [45.6574, -84.4772], [45.6551, -84.4427],
@@ -1517,7 +1525,8 @@ export const americasCities: City[] = [
             [45.8516, -84.7014], [45.8440, -84.7499], [45.7896, -84.7731]
         ]
     },
-    { name: "Lake Michigan", country: "United States", lat: 44.0000, lng: -87.0000, type: "lake",
+    { name: "Lake Michigan", country: "United States", lat: 44.0000, lng: -87.0000, type: "lake"
+   ,
         area: [
             [44.5690, -88.0417], [44.5384, -88.0031], [44.5402, -87.9846], [44.5362, -87.9807],
             [44.5359, -87.9904], [44.5291, -87.9572], [44.5360, -87.9290], [44.5745, -87.8990],
@@ -1676,7 +1685,8 @@ export const americasCities: City[] = [
             [44.5690, -88.0417]
         ]
     },
-    { name: "Lake Titicaca", country: "Bolivia/Peru", lat: -15.8333, lng: -69.3333, type: "lake",
+    { name: "Lake Titicaca", country: "Bolivia/Peru", lat: -15.8333, lng: -69.3333, type: "lake"
+   ,
         area: [
             [-15.7542, -70.0360], [-15.7869, -70.0241], [-15.7941, -70.0124], [-15.7894, -70.0053],
             [-15.8188, -69.9887], [-15.8295, -69.9925], [-15.8244, -70.0036], [-15.8315, -70.0177],
@@ -1759,7 +1769,8 @@ export const americasCities: City[] = [
     { name: "Hudson Bay", country: "Canada", lat: 60.0000, lng: -85.0000, type: "sea" },
 
     // Islands
-    { name: "Greenland", country: "Greenland", lat: 71.7069, lng: -42.6043, type: "island",
+    { name: "Greenland", country: "Greenland", lat: 71.7069, lng: -42.6043, type: "island"
+   ,
         area: [
             [76.7318, -74.1250], [76.7082, -74.1175], [76.6851, -74.0980], [76.6356, -74.0183],
             [76.5987, -73.9176], [76.5481, -73.7283], [76.4996, -73.4438], [76.4792, -73.1139],
@@ -1837,7 +1848,8 @@ export const americasCities: City[] = [
             [76.7662, -74.1151], [76.7318, -74.1250]
         ]
     },
-    { name: "Cuba", country: "Cuba", lat: 21.5218, lng: -77.7812, type: "island",
+    { name: "Cuba", country: "Cuba", lat: 21.5218, lng: -77.7812, type: "island"
+   ,
         area: [
             [21.8665, -85.1680], [21.7970, -85.1565], [21.7149, -85.1080], [21.6641, -85.0436],
             [21.6370, -84.9858], [21.5529, -84.5034], [21.5770, -84.3704], [21.6890, -84.0465],
@@ -1862,7 +1874,8 @@ export const americasCities: City[] = [
             [21.9813, -85.1335], [21.9070, -85.1636], [21.8665, -85.1680]
         ]
     },
-    { name: "Hispaniola", country: "Haiti/Dominican Republic", lat: 18.9712, lng: -70.6580, type: "island",
+    { name: "Hispaniola", country: "Haiti/Dominican Republic", lat: 18.9712, lng: -70.6580, type: "island"
+   ,
         area: [
             [18.4157, -74.4809], [18.4123, -74.4633], [18.3969, -74.4492], [18.3494, -74.4476],
             [18.3334, -74.4017], [18.3193, -74.4019], [18.3144, -74.3844], [18.2966, -74.3697],
@@ -2067,7 +2080,8 @@ export const americasCities: City[] = [
             [18.4197, -74.4731], [18.4157, -74.4809]
         ]
     },
-    { name: "Vancouver Island", country: "Canada", lat: 49.6500, lng: -125.4500, type: "island",
+    { name: "Vancouver Island", country: "Canada", lat: 49.6500, lng: -125.4500, type: "island"
+   ,
         area: [
             [50.7804, -128.4329], [50.7667, -128.4192], [50.7713, -128.4020], [50.7556, -128.4048],
             [50.7507, -128.3983], [50.7440, -128.4120], [50.7348, -128.3886], [50.7414, -128.3736],
@@ -2396,7 +2410,8 @@ export const americasCities: City[] = [
             [50.7804, -128.4329]
         ]
     },
-    { name: "Tierra del Fuego", country: "Argentina/Chile", lat: -54.0000, lng: -69.0000, type: "island",
+    { name: "Tierra del Fuego", country: "Argentina/Chile", lat: -54.0000, lng: -69.0000, type: "island"
+   ,
         area: [
             [-54.5106, -72.0137], [-54.5259, -71.9798], [-54.5336, -71.9899], [-54.5401, -71.9721],
             [-54.5479, -71.9869], [-54.5663, -71.9583], [-54.5554, -71.9412], [-54.5498, -71.9456],
@@ -2784,7 +2799,8 @@ export const americasCities: City[] = [
     },
     
     // National Parks
-    { name: "Yellowstone", country: "United States", lat: 44.4280, lng: -110.5885, type: "national_park",
+    { name: "Yellowstone", country: "United States", lat: 44.4280, lng: -110.5885, type: "national_park"
+   ,
         area: [
             [46.0467, -108.9257], [45.9593, -108.9222], [45.9594, -108.9014], [45.6825, -108.9051],
             [45.6829, -108.8847], [45.6537, -108.8845], [45.6537, -108.8639], [45.6394, -108.8638],
@@ -2813,7 +2829,8 @@ export const americasCities: City[] = [
             [46.1321, -108.9244], [46.0467, -108.9257]
         ]
     },
-    { name: "Yosemite", country: "United States", lat: 37.8651, lng: -119.5383, type: "national_park",
+    { name: "Yosemite", country: "United States", lat: 37.8651, lng: -119.5383, type: "national_park"
+   ,
         area: [
             [37.9835, -119.8862], [37.8926, -119.8852], [37.8921, -119.8274], [37.8333, -119.8270],
             [37.8368, -119.8364], [37.8443, -119.8317], [37.8402, -119.8549], [37.8326, -119.8549],
@@ -2844,14 +2861,10 @@ export const americasCities: City[] = [
             [37.9996, -119.8767], [37.9835, -119.8862]
         ]
     },
-    { name: "Banff", country: "Canada", lat: 51.4968, lng: -115.9281, type: "national_park",
-        area: [
-            [51.1672, -115.5910], [51.1618, -115.5570], [51.1716, -115.5540], [51.1791, -115.5618],
-            [51.1880, -115.5452], [51.1859, -115.5554], [51.1934, -115.5554], [51.1840, -115.5814],
-            [51.1780, -115.5773], [51.1672, -115.5910]
-        ]
+    { name: "Banff", country: "Canada", lat: 51.4968, lng: -115.9281, type: "national_park"
     },
-    { name: "Torres del Paine", country: "Chile", lat: -51.0000, lng: -73.0000, type: "national_park",
+    { name: "Torres del Paine", country: "Chile", lat: -51.0000, lng: -73.0000, type: "national_park"
+   ,
         area: [
             [-51.1556, -73.4688], [-51.2049, -73.4562], [-51.2254, -73.4633], [-51.2736, -73.4566],
             [-51.3073, -73.4330], [-51.3390, -73.4479], [-51.3333, -73.1085], [-51.3526, -73.1030],
@@ -2895,7 +2908,8 @@ export const americasCities: City[] = [
     // Deserts
     { name: "Atacama Desert", country: "Chile", lat: -24.5000, lng: -69.2500, type: "desert" },
     { name: "Sonoran Desert", country: "USA/Mexico", lat: 31.8596, lng: -113.8058, type: "desert" },
-    { name: "Mojave Desert", country: "United States", lat: 35.0110, lng: -115.4734, type: "desert",
+    { name: "Mojave Desert", country: "United States", lat: 35.0110, lng: -115.4734, type: "desert"
+   ,
         area: [
             [34.8180, -118.7444], [34.7984, -118.7271], [34.7848, -118.7309], [34.7929, -118.6993],
             [34.7757, -118.6840], [34.7767, -118.6435], [34.7582, -118.6360], [34.7711, -118.6157],

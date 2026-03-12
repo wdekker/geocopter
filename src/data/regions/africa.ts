@@ -92,7 +92,8 @@ export const africaCities: City[] = [
     { name: "Mount Kilimanjaro", country: "Tanzania", lat: -3.0674, lng: 37.3556, type: "mountain" },
     { name: "Atlas Mountains", country: "Morocco/Algeria", lat: 31.0538, lng: -7.9150, type: "mountain" },
     { name: "Mount Kenya", country: "Kenya", lat: -0.1508, lng: 37.3075, type: "mountain" },
-    { name: "Simien Mountains", country: "Ethiopia", lat: 13.1501, lng: 38.3752, type: "mountain",
+    { name: "Simien Mountains", country: "Ethiopia", lat: 13.1501, lng: 38.3752, type: "mountain"
+   ,
         area: [
             [13.1889, 37.8363], [13.1807, 37.8367], [13.1713, 37.8634], [13.1859, 37.8832],
             [13.1656, 37.8931], [13.1633, 37.9018], [13.1769, 37.9179], [13.1754, 37.9368],
@@ -131,7 +132,8 @@ export const africaCities: City[] = [
     { name: "Drakensberg", country: "South Africa", lat: -29.2333, lng: 29.3667, type: "mountain" },
     
     // Rivers
-    { name: "Nile", country: "Multinational", lat: 30.1667, lng: 31.1000, type: "river",
+    { name: "Nile", country: "Multinational", lat: 30.1667, lng: 31.1000, type: "river"
+   ,
         line: [
             [9.4755, 30.7562], [9.4565, 30.7904], [9.4600, 30.8183], [9.4529, 30.8395],
             [9.4644, 30.8937], [9.4615, 30.9139], [9.4779, 30.9206], [9.4852, 30.9371],
@@ -196,12 +198,10 @@ export const africaCities: City[] = [
             [9.6596, 30.8579], [9.6111, 30.7615], [9.4755, 30.7562]
         ]
     },
-    { name: "Congo River", country: "Multinational", lat: -6.0718, lng: 12.4497, type: "river",
-        line: [
-            [8.4547, -13.2388], [8.4709, -13.2517]
-        ]
+    { name: "Congo River", country: "Multinational", lat: -6.0718, lng: 12.4497, type: "river"
     },
-    { name: "Niger River", country: "Multinational", lat: 4.3167, lng: 6.0667, type: "river",
+    { name: "Niger River", country: "Multinational", lat: 4.3167, lng: 6.0667, type: "river"
+   ,
         line: [
             [15.5195, 0.5358], [15.5173, 0.5510], [15.5305, 0.5776], [15.4973, 0.6477],
             [15.4948, 0.6757], [15.4643, 0.7159], [15.4435, 0.7206], [15.5116, 0.5578],
@@ -485,7 +485,8 @@ export const africaCities: City[] = [
             [15.2320, -4.1214], [15.2359, -4.1058], [15.2517, -4.1018], [15.2670, -4.0734]
         ]
     },
-    { name: "Zambezi", country: "Multinational", lat: -18.8475, lng: 36.3117, type: "river",
+    { name: "Zambezi", country: "Multinational", lat: -18.8475, lng: 36.3117, type: "river"
+   ,
         line: [
             [-15.6896, 29.4684], [-15.6768, 29.4876], [-15.6738, 29.5092], [-15.6500, 29.5275],
             [-15.6377, 29.5570], [-15.6443, 29.5711], [-11.3694, 24.3084], [-11.3500, 24.3301],
@@ -726,7 +727,8 @@ export const africaCities: City[] = [
             [-17.5122, 24.7580], [-17.5085, 24.7807]
         ]
     },
-    { name: "Orange River", country: "South Africa/Namibia", lat: -28.6333, lng: 16.4833, type: "river",
+    { name: "Orange River", country: "South Africa/Namibia", lat: -28.6333, lng: 16.4833, type: "river"
+   ,
         line: [
             [-28.8867, 29.0208], [-28.8911, 29.0139], [-28.9178, 29.0301], [-28.9438, 29.0169],
             [-28.9498, 29.0246], [-28.9727, 29.0265], [-28.9748, 29.0348], [-28.9905, 29.0269],
@@ -931,7 +933,8 @@ export const africaCities: City[] = [
     },
 
     // Lakes
-    { name: "Lake Victoria", country: "Tanzania/Uganda/Kenya", lat: -1.0000, lng: 33.0000, type: "lake",
+    { name: "Lake Victoria", country: "Tanzania/Uganda/Kenya", lat: -1.0000, lng: 33.0000, type: "lake"
+   ,
         area: [
             [-2.0907, 31.5951], [-2.0889, 31.6211], [-2.0460, 31.6307], [-2.0452, 31.6644],
             [-2.0154, 31.6834], [-2.0071, 31.7005], [-2.0175, 31.7036], [-2.0641, 31.6886],
@@ -1305,7 +1308,8 @@ export const africaCities: City[] = [
             [-2.0550, 31.6191], [-2.0907, 31.5951]
         ]
     },
-    { name: "Lake Tanganyika", country: "Multinational", lat: -5.5000, lng: 29.5000, type: "lake",
+    { name: "Lake Tanganyika", country: "Multinational", lat: -5.5000, lng: 29.5000, type: "lake"
+   ,
         area: [
             [-4.3035, 29.0578], [-4.3166, 29.0708], [-4.3153, 29.0955], [-4.3299, 29.1015],
             [-4.3356, 29.1483], [-4.1357, 29.2121], [-4.1054, 29.2141], [-4.0822, 29.2284],
@@ -1434,7 +1438,8 @@ export const africaCities: City[] = [
             [-4.2735, 29.0742], [-4.2693, 29.0665], [-4.2770, 29.0606], [-4.3035, 29.0578]
         ]
     },
-    { name: "Lake Malawi", country: "Malawi/Tanzania/Mozambique", lat: -12.0000, lng: 34.5000, type: "lake",
+    { name: "Lake Malawi", country: "Malawi/Tanzania/Mozambique", lat: -12.0000, lng: 34.5000, type: "lake"
+   ,
         area: [
             [-9.7571, 33.8885], [-9.7705, 33.8992], [-9.7954, 33.8989], [-9.7961, 33.9070],
             [-9.8475, 33.9045], [-9.8934, 33.9276], [-9.8964, 33.9365], [-9.8880, 33.9404],
@@ -1526,7 +1531,8 @@ export const africaCities: City[] = [
             [-9.7571, 33.8885]
         ]
     },
-    { name: "Lake Chad", country: "Multinational", lat: 13.5000, lng: 14.0000, type: "lake",
+    { name: "Lake Chad", country: "Multinational", lat: 13.5000, lng: 14.0000, type: "lake"
+   ,
         area: [
             [12.8792, 14.2501], [12.8941, 14.2877], [12.8855, 14.3061], [12.8803, 14.3038],
             [12.8822, 14.3223], [12.8577, 14.3247], [12.8471, 14.3148], [12.8495, 14.2987],
@@ -1589,7 +1595,8 @@ export const africaCities: City[] = [
     },
 
     // Islands
-    { name: "Madagascar", country: "Madagascar", lat: -20.0000, lng: 47.0000, type: "island",
+    { name: "Madagascar", country: "Madagascar", lat: -20.0000, lng: 47.0000, type: "island"
+   ,
         area: [
             [-22.0840, 42.9680], [-22.4743, 43.0387], [-22.8761, 43.1432], [-23.4150, 43.4174],
             [-24.3395, 43.4478], [-24.3933, 43.4576], [-25.0984, 43.8413], [-25.3526, 44.0392],
@@ -1622,7 +1629,8 @@ export const africaCities: City[] = [
             [-22.0840, 42.9680]
         ]
     },
-    { name: "Zanzibar", country: "Tanzania", lat: -6.1306, lng: 39.3148, type: "island",
+    { name: "Zanzibar", country: "Tanzania", lat: -6.1306, lng: 39.3148, type: "island"
+   ,
         area: [
             [-5.4048, 39.6317], [-5.4209, 39.6418], [-5.4229, 39.6356], [-5.4347, 39.6390],
             [-5.4303, 39.6806], [-5.4425, 39.6977], [-5.4552, 39.7021], [-5.4505, 39.7149],
@@ -1661,7 +1669,8 @@ export const africaCities: City[] = [
             [-5.4048, 39.6317]
         ]
     },
-    { name: "Mauritius", country: "Mauritius", lat: -20.3484, lng: 57.5522, type: "island",
+    { name: "Mauritius", country: "Mauritius", lat: -20.3484, lng: 57.5522, type: "island"
+   ,
         area: [
             [-16.8221, 59.2608], [-16.9070, 59.2783], [-16.9476, 59.3030], [-16.9808, 59.3348],
             [-17.0239, 59.4132], [-17.0353, 59.5066], [-17.0215, 59.5746], [-16.9890, 59.6593],
@@ -1673,7 +1682,8 @@ export const africaCities: City[] = [
             [-16.5527, 59.2901], [-16.6013, 59.2966], [-16.8221, 59.2608]
         ]
     },
-    { name: "Seychelles", country: "Seychelles", lat: -4.6796, lng: 55.4920, type: "island",
+    { name: "Seychelles", country: "Seychelles", lat: -4.6796, lng: 55.4920, type: "island"
+   ,
         area: [
             [-3.7250, 55.0017], [-3.8010, 55.0163], [-3.8670, 55.0595], [-3.9110, 55.1241],
             [-3.9270, 55.2056], [-3.9100, 55.2843], [-3.8650, 55.3503], [-3.7960, 55.3960],
@@ -1684,7 +1694,8 @@ export const africaCities: City[] = [
     },
     
     // National Parks
-    { name: "Serengeti", country: "Tanzania", lat: -2.3333, lng: 34.8333, type: "national_park",
+    { name: "Serengeti", country: "Tanzania", lat: -2.3333, lng: 34.8333, type: "national_park"
+   ,
         area: [
             [-2.3013, 34.2162], [-2.3091, 34.2287], [-2.3060, 34.2434], [-2.3125, 34.2549],
             [-2.3048, 34.2776], [-2.3135, 34.2976], [-2.3242, 34.2953], [-2.3678, 34.3260],
@@ -1711,7 +1722,8 @@ export const africaCities: City[] = [
             [-2.1310, 34.2400], [-2.1498, 34.2318], [-2.1973, 34.2390], [-2.3013, 34.2162]
         ]
     },
-    { name: "Kruger National Park", country: "South Africa", lat: -23.9884, lng: 31.5547, type: "national_park",
+    { name: "Kruger National Park", country: "South Africa", lat: -23.9884, lng: 31.5547, type: "national_park"
+   ,
         area: [
             [-22.7108, 30.8875], [-22.7278, 31.0136], [-22.7741, 30.9921], [-23.0668, 30.8996],
             [-23.4901, 31.0589], [-23.5093, 31.0816], [-23.5280, 31.0838], [-23.5259, 31.1189],
@@ -1759,7 +1771,8 @@ export const africaCities: City[] = [
     // Deserts
     { name: "Sahara Desert", country: "Multinational", lat: 23.0000, lng: 13.0000, type: "desert" },
     { name: "Kalahari Desert", country: "Multinational", lat: -23.0000, lng: 22.0000, type: "desert" },
-    { name: "Namib Desert", country: "Namibia", lat: -24.7500, lng: 15.2500, type: "desert",
+    { name: "Namib Desert", country: "Namibia", lat: -24.7500, lng: 15.2500, type: "desert"
+   ,
         area: [
             [-23.3983, 14.4330], [-23.4549, 14.4442], [-23.6279, 14.5123], [-23.6767, 14.5022],
             [-23.7587, 14.4992], [-23.7952, 14.5093], [-23.8098, 14.5050], [-23.9035, 14.5171],

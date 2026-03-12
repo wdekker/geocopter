@@ -125,7 +125,8 @@ export const nlCities: City[] = [
     { name: "Nunspeet", country: "Netherlands", lat: 52.3783, lng: 5.7878, state: "Gelderland", type: "city" },
     { name: "Putten", country: "Netherlands", lat: 52.26, lng: 5.6083, state: "Gelderland", type: "city" },
     { name: "Ermelo", country: "Netherlands", lat: 52.2997, lng: 5.6264, state: "Gelderland", type: "city" },
-    { name: "Waal", country: "Netherlands", lat: 51.85, lng: 5.5, state: "Gelderland", type: "river",
+    { name: "Waal", country: "Netherlands", lat: 51.85, lng: 5.5, state: "Gelderland", type: "river"
+   ,
         line: [
             [51.8715, 6.0442], [51.8810, 6.0025], [51.8538, 5.9682], [51.8718, 5.9364],
             [51.8740, 5.9138], [51.8516, 5.8601], [51.8732, 5.8087], [51.8945, 5.7009],
@@ -134,7 +135,8 @@ export const nlCities: City[] = [
             [51.8174, 5.0411], [51.8209, 5.0022], [51.8190, 5.2683], [51.8173, 5.2477]
         ]
     },
-    { name: "IJsselmeer", country: "Netherlands", lat: 52.75, lng: 5.4, state: "Flevoland", type: "lake",
+    { name: "IJsselmeer", country: "Netherlands", lat: 52.75, lng: 5.4, state: "Flevoland", type: "lake"
+   ,
         area: [
             [52.9225, 5.0374], [52.9246, 5.0499], [52.8517, 5.1137], [52.7747, 5.1038],
             [52.7705, 5.1209], [52.7551, 5.1243], [52.7369, 5.1558], [52.7386, 5.1504],
@@ -160,7 +162,8 @@ export const nlCities: City[] = [
             [52.9353, 5.0442], [52.9264, 5.0527], [52.9324, 5.0417], [52.9225, 5.0374]
         ]
     },
-    { name: "Waddenzee", country: "Netherlands", lat: 53.3, lng: 5.3, state: "Friesland", type: "sea",
+    { name: "Waddenzee", country: "Netherlands", lat: 53.3, lng: 5.3, state: "Friesland", type: "sea"
+   ,
         area: [
             [52.9373, 4.7916], [52.9117, 4.8099], [52.8881, 4.8771], [52.9037, 4.9360],
             [52.9308, 4.9682], [52.9349, 5.0209], [52.9440, 5.0259], [52.9429, 5.0385],
@@ -274,7 +277,8 @@ export const nlCities: City[] = [
             [52.9373, 4.7916]
         ]
     },
-    { name: "Veluwe", country: "Netherlands", lat: 52.2, lng: 5.8, state: "Gelderland", type: "mountain",
+    { name: "Veluwe", country: "Netherlands", lat: 52.2, lng: 5.8, state: "Gelderland", type: "mountain"
+   ,
         area: [
             [52.2818, 5.5977], [52.2748, 5.6200], [52.2605, 5.6182], [52.2578, 5.6290],
             [52.2490, 5.6146], [52.2421, 5.6267], [52.2271, 5.6236], [52.2274, 5.6147],
@@ -334,7 +338,8 @@ export const nlCities: City[] = [
             [52.2818, 5.5977]
         ]
     },
-    { name: "Maas", country: "Netherlands", lat: 51.6, lng: 5.4, type: "river",
+    { name: "Maas", country: "Netherlands", lat: 51.6, lng: 5.4, type: "river"
+   ,
         line: [
             [47.9742, 5.6332], [47.9918, 5.6082], [47.9937, 5.5478], [48.0044, 5.5354],
             [48.0103, 5.5418], [48.0135, 5.5344], [48.0189, 5.5380], [48.0206, 5.5292],
@@ -445,7 +450,8 @@ export const nlCities: City[] = [
             [51.8021, 5.6530]
         ]
     },
-    { name: "IJssel", country: "Netherlands", lat: 52.268, lng: 6.1233, type: "river",
+    { name: "IJssel", country: "Netherlands", lat: 52.268, lng: 6.1233, type: "river"
+   ,
         line: [
             [51.9501, 5.9535], [51.9590, 5.9496], [51.9675, 5.9560], [51.9769, 5.9978],
             [51.9946, 6.0100], [51.9971, 6.0330], [52.0146, 6.0591], [52.0105, 6.0765],
@@ -463,7 +469,8 @@ export const nlCities: City[] = [
             [52.5586, 5.9205]
         ]
     },
-    { name: "Lek", country: "Netherlands", lat: 51.9696, lng: 4.9822, type: "river",
+    { name: "Lek", country: "Netherlands", lat: 51.9696, lng: 4.9822, type: "river"
+   ,
         line: [
             [51.7300, -5.8077], [51.6860, -5.7997], [51.6460, -5.7776], [51.6090, -5.7416],
             [51.5780, -5.6943], [51.5430, -5.5996], [51.5290, -5.4701], [51.5024, -5.3803],
@@ -533,13 +540,15 @@ export const nlCities: City[] = [
             [51.8140, -5.7781], [51.7740, -5.8000], [51.7300, -5.8077]
         ]
     },
-    { name: "Merwede", country: "Netherlands", lat: 52.0743, lng: 5.1076, type: "river",
+    { name: "Merwede", country: "Netherlands", lat: 52.0743, lng: 5.1076, type: "river"
+   ,
         line: [
             [51.8206, 4.8944], [51.7988, 4.8460], [51.7932, 4.7737], [51.7846, 4.7578],
             [51.7503, 4.7313], [51.7224, 4.6719]
         ]
     },
-    { name: "Linge", country: "Netherlands", lat: 51.9207, lng: 5.4474, type: "river",
+    { name: "Linge", country: "Netherlands", lat: 51.9207, lng: 5.4474, type: "river"
+   ,
         line: [
             [4.2980, 96.7556], [4.2804, 96.7937], [4.2816, 96.8366], [4.2211, 96.8875],
             [4.1996, 96.9302], [4.1999, 96.9733], [4.1751, 96.9998], [4.2045, 97.0151],
@@ -553,7 +562,8 @@ export const nlCities: City[] = [
             [4.2980, 96.7556]
         ]
     },
-    { name: "Vecht", country: "Netherlands", lat: 52.2429, lng: 5.0449, type: "river",
+    { name: "Vecht", country: "Netherlands", lat: 52.2429, lng: 5.0449, type: "river"
+   ,
         line: [
             [52.0974, 5.1149], [52.1175, 5.0939], [52.1415, 5.0331], [52.1525, 5.0346],
             [52.1537, 5.0215], [52.1743, 5.0032], [52.1942, 5.0049], [52.2109, 5.0289],
@@ -565,14 +575,16 @@ export const nlCities: City[] = [
             [52.2922, 5.0742], [52.3267, 5.0653]
         ]
     },
-    { name: "Amstel", country: "Netherlands", lat: 52.3111, lng: 4.9052, type: "river",
+    { name: "Amstel", country: "Netherlands", lat: 52.3111, lng: 4.9052, type: "river"
+   ,
         line: [
             [52.2533, 4.8700], [52.2642, 4.8825], [52.2797, 4.8792], [52.3068, 4.9078],
             [52.3188, 4.9090], [52.3233, 4.8955], [52.3325, 4.8985], [52.3415, 4.9154],
             [52.3674, 4.8940]
         ]
     },
-    { name: "Zaan", country: "Netherlands", lat: 52.4703, lng: 4.8133, type: "river",
+    { name: "Zaan", country: "Netherlands", lat: 52.4703, lng: 4.8133, type: "river"
+   ,
         line: [
             [21.3374, 105.8806], [21.3252, 105.8993], [21.3042, 105.9010], [21.3057, 105.9170],
             [21.2948, 105.9169], [21.2944, 105.9315], [21.2872, 105.9231], [21.2708, 105.9230],
@@ -619,7 +631,8 @@ export const nlCities: City[] = [
             [21.3498, 105.9084], [21.3464, 105.8872], [21.3374, 105.8806]
         ]
     },
-    { name: "Oude Rijn", country: "Netherlands", lat: 52.1191, lng: 4.6745, type: "river",
+    { name: "Oude Rijn", country: "Netherlands", lat: 52.1191, lng: 4.6745, type: "river"
+   ,
         line: [
             [52.0920, 4.9634], [52.0900, 4.9547], [52.1053, 4.9290], [52.0957, 4.8931],
             [52.0827, 4.8868], [52.0873, 4.8563], [52.0860, 4.8388], [52.0777, 4.8311],
@@ -629,7 +642,8 @@ export const nlCities: City[] = [
             [52.1777, 4.4476], [52.1868, 4.4286], [52.1973, 4.4295], [52.2081, 4.4062]
         ]
     },
-    { name: "Hollandse IJssel", country: "Netherlands", lat: 52.0089, lng: 4.7943, type: "river",
+    { name: "Hollandse IJssel", country: "Netherlands", lat: 52.0089, lng: 4.7943, type: "river"
+   ,
         line: [
             [52.0155, 5.0754], [52.0210, 5.0476], [52.0533, 5.0116], [52.0568, 4.9813],
             [52.0530, 4.9542], [52.0265, 4.9240], [52.0173, 4.8778], [52.0236, 4.8646],
@@ -638,7 +652,8 @@ export const nlCities: City[] = [
             [52.0042, 4.7426]
         ]
     },
-    { name: "Berkel", country: "Netherlands", lat: 51.9934, lng: 4.4787, type: "river",
+    { name: "Berkel", country: "Netherlands", lat: 51.9934, lng: 4.4787, type: "river"
+   ,
         line: [
             [51.9710, 7.3044], [51.9852, 7.2253], [51.9745, 7.1884], [51.9550, 7.1833],
             [51.9462, 7.1723], [51.9357, 7.1360], [51.9478, 7.0984], [51.9382, 7.0713],
@@ -651,7 +666,8 @@ export const nlCities: City[] = [
             [52.1329, 6.1912], [51.9742, 7.2886]
         ]
     },
-    { name: "Roer", country: "Netherlands", lat: 51.1449, lng: 6.0712, type: "river",
+    { name: "Roer", country: "Netherlands", lat: 51.1449, lng: 6.0712, type: "river"
+   ,
         line: [
             [50.5086, 6.1027], [50.5091, 6.1208], [50.4890, 6.1410], [50.4917, 6.1692],
             [50.5228, 6.2083], [50.5314, 6.1975], [50.5521, 6.2134], [50.5541, 6.2684],
@@ -673,7 +689,8 @@ export const nlCities: City[] = [
             [51.1798, 5.9949], [51.1873, 5.9805], [51.1983, 5.9806]
         ]
     },
-    { name: "Dommel", country: "Netherlands", lat: 51.4099, lng: 5.4364, type: "river",
+    { name: "Dommel", country: "Netherlands", lat: 51.4099, lng: 5.4364, type: "river"
+   ,
         line: [
             [51.0570, 5.4626], [51.0875, 5.4476], [51.1120, 5.4578], [51.1496, 5.4248],
             [51.1675, 5.4373], [51.2150, 5.4387], [51.2254, 5.4362], [51.2302, 5.4210],
@@ -690,19 +707,22 @@ export const nlCities: City[] = [
             [51.6284, 5.3512], [51.6368, 5.3487]
         ]
     },
-    { name: "Gouwe", country: "Netherlands", lat: 52.0605, lng: 4.6614, type: "river",
+    { name: "Gouwe", country: "Netherlands", lat: 52.0605, lng: 4.6614, type: "river"
+   ,
         line: [
             [52.0248, 4.6675], [52.0355, 4.6586], [52.0665, 4.6587], [52.1151, 4.6727],
             [52.0239, 4.6684], [52.0150, 4.6837], [52.1191, 4.6745], [52.0239, 4.6684]
         ]
     },
-    { name: "Schie", country: "Netherlands", lat: 51.9497, lng: 4.4104, type: "river",
+    { name: "Schie", country: "Netherlands", lat: 51.9497, lng: 4.4104, type: "river"
+   ,
         line: [
             [52.0054, 4.3609], [51.9587, 4.3965], [51.9088, 4.4510], [51.9182, 4.3964],
             [51.9405, 4.4210], [51.9497, 4.4104], [51.9336, 4.4458]
         ]
     },
-    { name: "Markermeer", country: "Netherlands", lat: 52.5462, lng: 5.2428, type: "lake",
+    { name: "Markermeer", country: "Netherlands", lat: 52.5462, lng: 5.2428, type: "lake"
+   ,
         area: [
             [52.6248, 5.0156], [52.6245, 5.0236], [52.6018, 5.0195], [52.5682, 5.0308],
             [52.5041, 5.0867], [52.4864, 5.0597], [52.4688, 5.0685], [52.4672, 5.0333],
@@ -721,7 +741,8 @@ export const nlCities: City[] = [
             [52.6326, 5.0626], [52.6414, 5.0496], [52.6248, 5.0156]
         ]
     },
-    { name: "Veluwemeer", country: "Netherlands", lat: 52.4096, lng: 5.718, type: "lake",
+    { name: "Veluwemeer", country: "Netherlands", lat: 52.4096, lng: 5.718, type: "lake"
+   ,
         area: [
             [52.3665, 5.6100], [52.3592, 5.6283], [52.3659, 5.6305], [52.3648, 5.6538],
             [52.3789, 5.6774], [52.3883, 5.7187], [52.4315, 5.8053], [52.4523, 5.8248],
@@ -729,48 +750,32 @@ export const nlCities: City[] = [
             [52.3968, 5.6583], [52.3665, 5.6100]
         ]
     },
-    { name: "Gooimeer", country: "Netherlands", lat: 52.3165, lng: 5.2055, type: "lake",
+    { name: "Gooimeer", country: "Netherlands", lat: 52.3165, lng: 5.2055, type: "lake"
+   ,
         area: [
             [52.3253, 5.1372], [52.3041, 5.1683], [52.3109, 5.2423], [52.3172, 5.2487],
             [52.3106, 5.2428], [52.3164, 5.2496], [52.3067, 5.2566], [52.2965, 5.2917],
             [52.3043, 5.3157], [52.3362, 5.2002], [52.3253, 5.1372]
         ]
     },
-    { name: "Ketelmeer", country: "Netherlands", lat: 52.5974, lng: 5.6944, type: "lake",
+    { name: "Ketelmeer", country: "Netherlands", lat: 52.5974, lng: 5.6944, type: "lake"
+   ,
         area: [
             [52.6083, 5.6398], [52.5967, 5.6573], [52.5793, 5.7739], [52.5884, 5.7787],
             [52.5834, 5.8425], [52.5913, 5.8288], [52.6113, 5.8445], [52.6128, 5.7503],
             [52.6082, 5.7531], [52.6155, 5.6528], [52.6083, 5.6398]
         ]
     },
-    { name: "Tjeukemeer", country: "Netherlands", lat: 52.8946, lng: 5.8051, type: "lake",
-        area: [
-            [52.8806, 5.7442], [52.8837, 5.7555], [52.8729, 5.7485], [52.8769, 5.8137],
-            [52.8866, 5.8427], [52.9025, 5.8444], [52.9126, 5.8297], [52.9138, 5.7776],
-            [52.8897, 5.7629], [52.8841, 5.7563], [52.8923, 5.7614], [52.8891, 5.7486],
-            [52.8806, 5.7442]
-        ]
+    { name: "Tjeukemeer", country: "Netherlands", lat: 52.8946, lng: 5.8051, type: "lake"
     },
-    { name: "Sneekermeer", country: "Netherlands", lat: 53.0322, lng: 5.7491, type: "lake",
-        area: [
-            [53.0206, 5.7285], [53.0141, 5.7405], [53.0263, 5.7631], [53.0358, 5.7692],
-            [53.0405, 5.7600], [53.0474, 5.7704], [53.0505, 5.7582], [53.0394, 5.7350],
-            [53.0327, 5.7290], [53.0267, 5.7363], [53.0206, 5.7285]
-        ]
+    { name: "Sneekermeer", country: "Netherlands", lat: 53.0322, lng: 5.7491, type: "lake"
     },
-    { name: "Heegermeer", country: "Netherlands", lat: 52.9537, lng: 5.5854, type: "lake",
-        area: [
-            [52.9526, 5.5607], [52.9445, 5.5697], [52.9424, 5.5931], [52.9602, 5.6176],
-            [52.9633, 5.5850], [52.9526, 5.5607]
-        ]
+    { name: "Heegermeer", country: "Netherlands", lat: 52.9537, lng: 5.5854, type: "lake"
     },
-    { name: "Fluessen", country: "Netherlands", lat: 52.9337, lng: 5.5255, type: "lake",
-        area: [
-            [52.9225, 5.4810], [52.9112, 5.4820], [52.9138, 5.4999], [52.9445, 5.5697],
-            [52.9566, 5.5438], [52.9225, 5.4810]
-        ]
+    { name: "Fluessen", country: "Netherlands", lat: 52.9337, lng: 5.5255, type: "lake"
     },
-    { name: "Lauwersmeer", country: "Netherlands", lat: 53.3761, lng: 6.1741, type: "lake",
+    { name: "Lauwersmeer", country: "Netherlands", lat: 53.3761, lng: 6.1741, type: "lake"
+   ,
         area: [
             [53.3525, 6.1437], [53.3365, 6.1534], [53.3294, 6.1713], [53.3229, 6.1722],
             [53.3187, 6.1615], [53.3203, 6.1779], [53.3272, 6.1759], [53.3305, 6.1876],
@@ -782,7 +787,8 @@ export const nlCities: City[] = [
             [53.3719, 6.1590], [53.3525, 6.1437]
         ]
     },
-    { name: "Veerse Meer", country: "Netherlands", lat: 51.5489, lng: 3.8341, type: "lake",
+    { name: "Veerse Meer", country: "Netherlands", lat: 51.5489, lng: 3.8341, type: "lake"
+   ,
         area: [
             [51.5827, 3.6276], [51.5630, 3.6386], [51.5501, 3.6699], [51.5088, 3.7065],
             [51.5132, 3.7214], [51.5163, 3.7049], [51.5199, 3.7260], [51.5402, 3.7344],
@@ -792,7 +798,8 @@ export const nlCities: City[] = [
             [51.5827, 3.6276]
         ]
     },
-    { name: "Grevelingenmeer", country: "Netherlands", lat: 51.7356, lng: 3.9656, type: "lake",
+    { name: "Grevelingenmeer", country: "Netherlands", lat: 51.7356, lng: 3.9656, type: "lake"
+   ,
         area: [
             [51.7389, 3.8258], [51.7452, 3.8875], [51.7296, 3.9131], [51.7342, 3.9719],
             [51.7177, 3.9821], [51.7005, 4.0095], [51.6866, 4.0150], [51.6846, 4.0445],
@@ -806,7 +813,8 @@ export const nlCities: City[] = [
             [51.7493, 3.8372], [51.7551, 3.8367], [51.7389, 3.8258]
         ]
     },
-    { name: "Haringvliet", country: "Netherlands", lat: 51.749, lng: 4.2467, type: "lake",
+    { name: "Haringvliet", country: "Netherlands", lat: 51.749, lng: 4.2467, type: "lake"
+   ,
         area: [
             [51.8057, 4.0902], [51.7782, 4.1631], [51.7768, 4.1952], [51.7730, 4.1901],
             [51.7763, 4.1957], [51.7246, 4.2661], [51.7037, 4.3249], [51.7031, 4.3654],
@@ -818,43 +826,18 @@ export const nlCities: City[] = [
         ]
     },
     { name: "Hollands Diep", country: "Netherlands", lat: 51.7187, lng: 4.6357, type: "lake" },
-    { name: "Loosdrechtse Plassen", country: "Netherlands", lat: 52.1866, lng: 5.0485, type: "lake",
-        area: [
-            [52.1843, 5.0340], [52.1837, 5.0449], [52.1663, 5.0475], [52.1712, 5.0694],
-            [52.1869, 5.0644], [52.1900, 5.0974], [52.1987, 5.0850], [52.2067, 5.0901],
-            [52.2069, 5.0681], [52.1967, 5.0623], [52.1969, 5.0403], [52.1951, 5.0456],
-            [52.1843, 5.0340]
-        ]
+    { name: "Loosdrechtse Plassen", country: "Netherlands", lat: 52.1866, lng: 5.0485, type: "lake"
     },
-    { name: "Vinkeveense Plassen", country: "Netherlands", lat: 52.2339, lng: 4.9435, type: "lake",
-        area: [
-            [52.2309, 4.9253], [52.2336, 4.9349], [52.2245, 4.9300], [52.2313, 4.9400],
-            [52.2242, 4.9312], [52.2316, 4.9431], [52.2214, 4.9345], [52.2363, 4.9630],
-            [52.2205, 4.9353], [52.2208, 4.9716], [52.2147, 4.9387], [52.2239, 4.9806],
-            [52.2381, 4.9724], [52.2355, 4.9641], [52.2390, 4.9719], [52.2529, 4.9588],
-            [52.2525, 4.9398], [52.2309, 4.9253]
-        ]
+    { name: "Vinkeveense Plassen", country: "Netherlands", lat: 52.2339, lng: 4.9435, type: "lake"
     },
-    { name: "Braassemermeer", country: "Netherlands", lat: 52.1952, lng: 4.6543, type: "lake",
-        area: [
-            [52.1932, 4.6285], [52.1828, 4.6315], [52.1833, 4.6552], [52.1889, 4.6672],
-            [52.2007, 4.6694], [52.2078, 4.6480], [52.1945, 4.6420], [52.1932, 4.6285]
-        ]
+    { name: "Braassemermeer", country: "Netherlands", lat: 52.1952, lng: 4.6543, type: "lake"
     },
-    { name: "Kagerplassen", country: "Netherlands", lat: 52.2041, lng: 4.5415, type: "lake",
-        area: [
-            [52.1977, 4.5067], [52.1870, 4.5193], [52.1989, 4.5562], [52.2061, 4.5564],
-            [52.2044, 4.5794], [52.1961, 4.5824], [52.2125, 4.5910], [52.2145, 4.6070],
-            [52.2170, 4.5721], [52.2063, 4.5588], [52.2212, 4.5535], [52.1977, 4.5067]
-        ]
+    { name: "Kagerplassen", country: "Netherlands", lat: 52.2041, lng: 4.5415, type: "lake"
     },
-    { name: "Kralingse Plas", country: "Netherlands", lat: 51.9347, lng: 4.5151, type: "lake",
-        area: [
-            [51.9343, 4.5037], [51.9276, 4.5189], [51.9380, 4.5255], [51.9417, 4.5133],
-            [51.9343, 4.5037]
-        ]
+    { name: "Kralingse Plas", country: "Netherlands", lat: 51.9347, lng: 4.5151, type: "lake"
     },
-    { name: "Noordzee", country: "Netherlands", lat: 52.5, lng: 4, type: "sea",
+    { name: "Noordzee", country: "Netherlands", lat: 52.5, lng: 4, type: "sea"
+   ,
         area: [
             [57.6351, -4.0389], [57.6138, -4.0045], [57.6138, -3.8548], [57.6726, -3.7216],
             [57.6785, -3.5197], [57.7159, -3.5074], [57.7382, -3.3079], [57.7063, -3.2094],
@@ -957,7 +940,8 @@ export const nlCities: City[] = [
             [57.8601, -3.8452], [57.8813, -3.7766], [57.8586, -3.7450], [57.6351, -4.0389]
         ]
     },
-    { name: "Oosterschelde", country: "Netherlands", lat: 51.5633, lng: 3.9643, type: "sea",
+    { name: "Oosterschelde", country: "Netherlands", lat: 51.5633, lng: 3.9643, type: "sea"
+   ,
         area: [
             [51.6232, 3.6799], [51.6187, 3.6960], [51.6149, 3.6842], [51.5976, 3.6841],
             [51.5906, 3.7213], [51.6043, 3.8504], [51.5750, 3.8924], [51.5639, 3.8961],
@@ -986,7 +970,8 @@ export const nlCities: City[] = [
             [51.6232, 3.6799]
         ]
     },
-    { name: "Westerschelde", country: "Netherlands", lat: 51.3938, lng: 3.7067, type: "sea",
+    { name: "Westerschelde", country: "Netherlands", lat: 51.3938, lng: 3.7067, type: "sea"
+   ,
         area: [
             [51.4347, 3.6365], [51.4376, 3.6648], [51.4192, 3.6970], [51.3986, 3.7079],
             [51.3928, 3.6974], [51.3609, 3.7477], [51.3400, 3.8407], [51.3519, 3.8906],
@@ -1000,7 +985,8 @@ export const nlCities: City[] = [
             [51.4347, 3.6365]
         ]
     },
-    { name: "Eems", country: "Netherlands", lat: 53.3, lng: 6.9, type: "river",
+    { name: "Eems", country: "Netherlands", lat: 53.3, lng: 6.9, type: "river"
+   ,
         line: [
             [51.8563, 8.6987], [51.8299, 8.6171], [51.8289, 8.5491], [51.7985, 8.4986],
             [51.7918, 8.4493], [51.7963, 8.4338], [51.8104, 8.4281], [51.8106, 8.3893],
@@ -1049,7 +1035,8 @@ export const nlCities: City[] = [
             [52.7621, 7.2561]
         ]
     },
-    { name: "Utrechtse Heuvelrug", country: "Netherlands", lat: 52.0287, lng: 5.3949, type: "mountain",
+    { name: "Utrechtse Heuvelrug", country: "Netherlands", lat: 52.0287, lng: 5.3949, type: "mountain"
+   ,
         area: [
             [52.0619, 5.2773], [52.0549, 5.2825], [52.0645, 5.2923], [52.0645, 5.3116],
             [52.0566, 5.3026], [52.0534, 5.3086], [52.0608, 5.3215], [52.0582, 5.3271],
@@ -1066,18 +1053,12 @@ export const nlCities: City[] = [
     },
     { name: "Vaalserberg", country: "Netherlands", lat: 50.75, lng: 6.02, type: "mountain" },
     { name: "Keutenberg", country: "Netherlands", lat: 50.84, lng: 5.87, type: "mountain" },
-    { name: "Grebbeberg", country: "Netherlands", lat: 51.9531, lng: 5.5974, type: "mountain",
-        area: [
-            [51.9519, 5.5867], [51.9549, 5.6078], [51.9519, 5.5867]
-        ]
+    { name: "Grebbeberg", country: "Netherlands", lat: 51.9531, lng: 5.5974, type: "mountain"
     },
-    { name: "Sint Jansberg", country: "Netherlands", lat: 51.7445, lng: 5.9211, type: "mountain",
-        area: [
-            [51.7464, 5.9121], [51.7375, 5.9263], [51.7379, 5.9550], [51.7520, 5.9160],
-            [51.7464, 5.9121]
-        ]
+    { name: "Sint Jansberg", country: "Netherlands", lat: 51.7445, lng: 5.9211, type: "mountain"
     },
-    { name: "Montferland", country: "Netherlands", lat: 51.924, lng: 6.2055, type: "mountain",
+    { name: "Montferland", country: "Netherlands", lat: 51.924, lng: 6.2055, type: "mountain"
+   ,
         area: [
             [51.9635, 6.0895], [51.9387, 6.0914], [51.8917, 6.1911], [51.8825, 6.1835],
             [51.8702, 6.2067], [51.8681, 6.2617], [51.8747, 6.2745], [51.8685, 6.3201],
@@ -1087,7 +1068,8 @@ export const nlCities: City[] = [
             [51.9587, 6.1580], [51.9805, 6.1447], [51.9635, 6.0895]
         ]
     },
-    { name: "Texel", country: "Netherlands", lat: 53.0893718, lng: 4.8213473, type: "island",
+    { name: "Texel", country: "Netherlands", lat: 53.0893718, lng: 4.8213473, type: "island"
+   ,
         area: [
             [52.9795, 4.6130], [52.9610, 4.6133], [52.9411, 4.6462], [52.9802, 4.7410],
             [52.9805, 4.7917], [53.0440, 4.9324], [53.0443, 5.0070], [53.0184, 5.0745],
@@ -1095,14 +1077,16 @@ export const nlCities: City[] = [
             [53.0879, 4.7156], [53.0473, 4.6864], [53.0024, 4.6871], [52.9795, 4.6130]
         ]
     },
-    { name: "Vlieland", country: "Netherlands", lat: 53.2556631, lng: 4.9548931, type: "island",
+    { name: "Vlieland", country: "Netherlands", lat: 53.2556631, lng: 4.9548931, type: "island"
+   ,
         area: [
             [53.2143, 4.8184], [53.1433, 5.0510], [53.0871, 5.0958], [53.1076, 5.1632],
             [53.1974, 5.1328], [53.3053, 5.1622], [53.3230, 5.1021], [53.3139, 5.0271],
             [53.2323, 4.8406], [53.2143, 4.8184]
         ]
     },
-    { name: "Terschelling", country: "Netherlands", lat: 53.3947171, lng: 5.2876795, type: "island",
+    { name: "Terschelling", country: "Netherlands", lat: 53.3947171, lng: 5.2876795, type: "island"
+   ,
         area: [
             [53.3231, 5.0871], [53.3053, 5.1622], [53.2513, 5.1475], [53.2156, 5.3872],
             [53.2156, 5.4321], [53.2694, 5.5371], [53.3053, 5.5672], [53.3187, 5.6123],
@@ -1110,7 +1094,8 @@ export const nlCities: City[] = [
             [53.4086, 5.1767], [53.3861, 5.1618], [53.3680, 5.1018], [53.3231, 5.0871]
         ]
     },
-    { name: "Ameland", country: "Netherlands", lat: 53.448327, lng: 5.7399613, type: "island",
+    { name: "Ameland", country: "Netherlands", lat: 53.448327, lng: 5.7399613, type: "island"
+   ,
         area: [
             [53.4716, 5.5529], [53.4581, 5.5829], [53.4221, 5.6128], [53.3187, 5.6123],
             [53.3680, 5.7027], [53.3949, 5.7029], [53.3948, 5.7480], [53.3767, 5.7779],
@@ -1119,7 +1104,8 @@ export const nlCities: City[] = [
             [53.4939, 5.6132], [53.4716, 5.5529]
         ]
     },
-    { name: "Schiermonnikoog", country: "Netherlands", lat: 53.4846304, lng: 6.168636, type: "island",
+    { name: "Schiermonnikoog", country: "Netherlands", lat: 53.4846304, lng: 6.168636, type: "island"
+   ,
         area: [
             [53.4923, 6.0501], [53.4293, 6.0792], [53.4133, 6.1940], [53.4463, 6.3504],
             [53.4970, 6.3516], [53.4949, 6.4090], [53.5056, 6.4187], [53.5209, 6.4044],
@@ -1127,7 +1113,8 @@ export const nlCities: City[] = [
             [53.5233, 6.1260], [53.4965, 6.1105], [53.4923, 6.0501]
         ]
     },
-    { name: "Hoge Veluwe", country: "Netherlands", lat: 52.0797059, lng: 5.8310773, type: "national_park",
+    { name: "Hoge Veluwe", country: "Netherlands", lat: 52.0797059, lng: 5.8310773, type: "national_park"
+   ,
         area: [
             [52.0866, 5.7774], [52.0361, 5.8149], [52.0339, 5.8699], [52.0432, 5.8529],
             [52.0566, 5.8648], [52.0636, 5.8609], [52.0772, 5.8803], [52.1037, 5.8788],
@@ -1135,7 +1122,8 @@ export const nlCities: City[] = [
             [52.0866, 5.7774]
         ]
     },
-    { name: "Biesbosch", country: "Netherlands", lat: 51.7687956, lng: 4.8950231, type: "national_park",
+    { name: "Biesbosch", country: "Netherlands", lat: 51.7687956, lng: 4.8950231, type: "national_park"
+   ,
         area: [
             [51.7328, 4.6365], [51.7118, 4.6500], [51.7226, 4.7467], [51.7083, 4.8239],
             [51.7175, 4.8732], [51.7257, 4.8767], [51.7276, 4.8550], [51.7314, 4.8606],
@@ -1148,7 +1136,8 @@ export const nlCities: City[] = [
             [51.7606, 4.6820], [51.7328, 4.6365]
         ]
     },
-    { name: "Weerribben-Wieden", country: "Netherlands", lat: 52.7292076, lng: 6.025131, type: "national_park",
+    { name: "Weerribben-Wieden", country: "Netherlands", lat: 52.7292076, lng: 6.025131, type: "national_park"
+   ,
         area: [
             [52.7912, 5.8896], [52.7557, 5.9493], [52.7491, 5.9497], [52.7546, 5.9653],
             [52.7451, 5.9747], [52.7319, 5.9735], [52.7315, 5.9985], [52.7177, 5.9929],
@@ -1166,7 +1155,8 @@ export const nlCities: City[] = [
             [52.7912, 5.8896]
         ]
     },
-    { name: "Amsterdam-Rijnkanaal", country: "Netherlands", lat: 52.0536237, lng: 5.1036818, type: "canal",
+    { name: "Amsterdam-Rijnkanaal", country: "Netherlands", lat: 52.0536237, lng: 5.1036818, type: "canal"
+   ,
         line: [
             [51.8886, 5.4606], [51.9149, 5.4439], [51.9467, 5.3766], [52.0128, 5.1519],
             [52.0392, 5.1114], [52.0793, 5.0811], [52.1134, 5.0756], [52.1608, 4.9968],
@@ -1175,13 +1165,15 @@ export const nlCities: City[] = [
             [51.8981, 5.4563], [51.9551, 5.3562]
         ]
     },
-    { name: "Noordzeekanaal", country: "Netherlands", lat: 52.4286305, lng: 4.7593459, type: "canal",
+    { name: "Noordzeekanaal", country: "Netherlands", lat: 52.4286305, lng: 4.7593459, type: "canal"
+   ,
         line: [
             [52.3951, 4.8912], [52.4148, 4.8615], [52.4337, 4.7211], [52.4621, 4.6602],
             [52.4648, 4.6274]
         ]
     },
-    { name: "Loonse en Drunense Duinen", country: "Netherlands", lat: 51.6477927, lng: 5.1364834, type: "desert",
+    { name: "Loonse en Drunense Duinen", country: "Netherlands", lat: 51.6477927, lng: 5.1364834, type: "desert"
+   ,
         area: [
             [51.6542, 5.0563], [51.6316, 5.0632], [51.6357, 5.0860], [51.6285, 5.0897],
             [51.6404, 5.1383], [51.6400, 5.1969], [51.6490, 5.2177], [51.6507, 5.2054],
