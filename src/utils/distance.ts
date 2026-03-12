@@ -39,3 +39,49 @@ export function getBearing(lat1: number, lon1: number, lat2: number, lon2: numbe
     const bearing = (rad2deg(theta) + 360) % 360; // in degrees
     return bearing;
 }
+
+// Ray-casting algorithm to determine if a point is inside a polygon
+export function isPointInPolygon(lat: number, lng: number, polygon: [number, number][]): boolean {
+    let isInside = false;
+    for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+        const xi = polygon[i][0], yi = polygon[i][1];
+        const xj = polygon[j][0], yj = polygon[j][1];
+        
+        const intersect = ((yi > lng) !== (yj > lng)) &&
+            (lat < (xj - xi) * (lng - yi) / (yj - yi) + xi);
+            
+        if (intersect) isInside = !isInside;
+    }
+    return isInside;
+}
+
+// Check each segment of a polyline to see if the point is within the threshold distance
+export function isPointNearLineSegments(lat: number, lng: number, line: [number, number][], thresholdKm: number): boolean {
+    for (let i = 0; i < line.length - 1; i++) {
+        const dist = distToSegment(lat, lng, line[i][0], line[i][1], line[i+1][0], line[i+1][1]);
+        if (dist <= thresholdKm) return true;
+    }
+    return false;
+}
+
+// Helper to calculate shortest distance from point to a line segment
+// Technically this is a planar approximation of spherical distance, but sufficient for our small collision radii
+function distToSegment(px: number, py: number, vx: number, vy: number, wx: number, wy: number): number {
+    const l2 = dist2(vx, vy, wx, wy);
+    if (l2 === 0) return getDistanceInKm(px, py, vx, vy); // v == w case
+    
+    // Consider the line extending the segment, parameterized as v + t (w - v).
+    // We find projection of point p onto the line. 
+    // It falls where t = [(p-v) . (w-v)] / |w-v|^2
+    let t = ((px - vx) * (wx - vx) + (py - vy) * (wy - vy)) / l2;
+    t = Math.max(0, Math.min(1, t));
+    
+    // Projection falls on the segment
+    const projX = vx + t * (wx - vx);
+    const projY = vy + t * (wy - vy);
+    return getDistanceInKm(px, py, projX, projY);
+}
+
+function dist2(vx: number, vy: number, wx: number, wy: number): number {
+    return (vx - wx)*(vx - wx) + (vy - wy)*(vy - wy);
+}

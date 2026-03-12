@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { MapContainer, TileLayer, Marker, useMap } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Polygon, Polyline, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Helicopter } from './Helicopter';
 import { REGIONS, type Region, type City } from '../data/cities';
-import { getDistanceInKm, getBearing } from '../utils/distance';
+import { getDistanceInKm, getBearing, isPointInPolygon, isPointNearLineSegments } from '../utils/distance';
 import { HUD } from './HUD';
 import { StartScreen } from './StartScreen';
 import { GameOverScreen } from './GameOverScreen';
@@ -170,13 +170,33 @@ export const GameMap: React.FC = () => {
 
         setBearing(heading);
 
-        // Apply Proximity Scalc based on region
+        // Apply Proximity Scale based on region
         const visibilityThresh = BASE_VISIBILITY_THRESHOLD_KM * activeRegion.proximityScale;
         const mediumThresh = BASE_MEDIUM_SIGNAL_THRESHOLD_KM * activeRegion.proximityScale;
         const collisionThresh = BASE_COLLISION_THRESHOLD_KM * activeRegion.proximityScale;
 
+        // Check geometries for visibility and collision
+        let isVisible = false;
+        let isCollision = false;
+
+        // Note: For geometric polygons we still calculate "dist" to the center point just for the
+        // "Signal Strength" meter, since calculating shortest distance to every vertex every frame is expensive
+        // The collision however will be precise.
+        if (currentTarget.area) {
+            isVisible = dist < visibilityThresh;
+            // For large polygons, we just check if the point is strictly inside them, no extra radius buffer needed.
+            isCollision = isPointInPolygon(helicopterPos[0], helicopterPos[1], currentTarget.area);
+        } else if (currentTarget.line) {
+            isVisible = dist < visibilityThresh;
+            isCollision = isPointNearLineSegments(helicopterPos[0], helicopterPos[1], currentTarget.line, collisionThresh);
+        } else {
+            // Standard point behavior
+            isVisible = dist < visibilityThresh;
+            isCollision = dist < collisionThresh;
+        }
+
         // Update proximity states
-        setShowTarget(dist < visibilityThresh);
+        setShowTarget(isVisible);
 
         if (dist < visibilityThresh) {
             setSignalStrength('Strong');
@@ -186,7 +206,7 @@ export const GameMap: React.FC = () => {
             setSignalStrength('Weak');
         }
 
-        if (dist < collisionThresh) {
+        if (isCollision) {
             playSound('success');
             setScore(s => s + (hardcoreMode ? 200 : 100)); // Double points for hardcore
             setMessage(t('foundCity', { city: currentTarget.name }));
@@ -261,7 +281,21 @@ export const GameMap: React.FC = () => {
                 />
 
                 {showTarget && gameState === 'PLAYING' && (
-                    <Marker position={[currentTarget.lat, currentTarget.lng]} icon={targetIcon} />
+                    <>
+                        {currentTarget.area ? (
+                            <Polygon 
+                                positions={currentTarget.area} 
+                                pathOptions={{ color: 'red', fillColor: 'red', fillOpacity: 0.2, weight: 2 }} 
+                            />
+                        ) : currentTarget.line ? (
+                            <Polyline 
+                                positions={currentTarget.line} 
+                                pathOptions={{ color: 'red', weight: 4 }} 
+                            />
+                        ) : (
+                            <Marker position={[currentTarget.lat, currentTarget.lng]} icon={targetIcon} />
+                        )}
+                    </>
                 )}
 
                 {gameState === 'PLAYING' && (
