@@ -123,7 +123,7 @@ async function run() {
         //     queryParams += `&country=${encodeURIComponent(country)}`;
         // }
         
-        const url = `https://nominatim.openstreetmap.org/search.php?${queryParams}&format=jsonv2&polygon_geojson=1&limit=8`;
+        const url = `https://nominatim.openstreetmap.org/search.php?${queryParams}&format=jsonv2&polygon_geojson=1&limit=50`;
         
         try {
             const res = await fetch(url, { headers: { 'User-Agent': 'Geogame-App-Dev-Test/1.0' } });
@@ -133,8 +133,19 @@ async function run() {
             
             if (data && data.length > 0) {
                 const validCategories = ['waterway', 'natural', 'water', 'boundary', 'leisure', 'place', 'landuse'];
-                const filtered = data.filter(item => validCategories.includes(item.category) || item.type === 'river' || item.type === 'canal' || item.type === 'lake' || item.type === 'national_park');
+                let filtered = data.filter(item => validCategories.includes(item.category) || item.type === 'river' || item.type === 'canal' || item.type === 'lake' || item.type === 'national_park');
                 
+                // Sort by bounding box size (diagonal distance) to get the largest possible representation 
+                // (e.g. the full river relation instead of a small local segment)
+                filtered.sort((a, b) => {
+                    const getDiag = (item) => {
+                        if (!item.boundingbox) return 0;
+                        const [minLat, maxLat, minLng, maxLng] = item.boundingbox.map(Number);
+                        return getDistanceKm(minLat, minLng, maxLat, maxLng);
+                    };
+                    return getDiag(b) - getDiag(a);
+                });
+
                 bestMatch = filtered.length > 0 ? filtered[0] : null;
             }
             
@@ -155,7 +166,8 @@ async function run() {
                     if (geo.type === 'LineString') {
                         coords = geo.coordinates;
                     } else if (geo.type === 'MultiLineString') {
-                        coords = geo.coordinates.reduce((a, b) => a.length > b.length ? a : b);
+                        // Flatten the segments into a single huge contiguous array
+                        coords = geo.coordinates.flat(1);
                     } else if (geo.type === 'Polygon') { 
                         coords = geo.coordinates[0];
                     } else if (geo.type === 'MultiPolygon') {
