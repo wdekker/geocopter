@@ -6,7 +6,7 @@ export interface City {
     lng: number;
     type?: string;   // Distinguishes rivers, mountains, etc. defaults to "city"
     area?: [number, number][]; // Optional Polygon boundary coordinates [lat, lng]
-    line?: [number, number][]; // Optional Polyline segment coordinates [lat, lng]
+    line?: [number, number][] | [number, number][][]; // Optional Polyline segment coordinates [lat, lng]
 }
 export interface Region {
     id: string;

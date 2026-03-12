@@ -56,10 +56,20 @@ export function isPointInPolygon(lat: number, lng: number, polygon: [number, num
 }
 
 // Check each segment of a polyline to see if the point is within the threshold distance
-export function isPointNearLineSegments(lat: number, lng: number, line: [number, number][], thresholdKm: number): boolean {
-    for (let i = 0; i < line.length - 1; i++) {
-        const dist = distToSegment(lat, lng, line[i][0], line[i][1], line[i+1][0], line[i+1][1]);
-        if (dist <= thresholdKm) return true;
+export function isPointNearLineSegments(lat: number, lng: number, lineInput: any[], thresholdKm: number): boolean {
+    if (!lineInput || lineInput.length === 0) return false;
+    
+    // Check if it's a nested array [number, number][][] or flat array [number, number][]
+    const isMultiLine = Array.isArray(lineInput[0][0]);
+    const lines = isMultiLine ? lineInput : [lineInput];
+
+    for (const line of lines) {
+        for (let i = 0; i < line.length - 1; i++) {
+            const dist = distToSegment(lat, lng, line[i][0], line[i][1], line[i+1][0], line[i+1][1]);
+            if (dist <= thresholdKm) {
+                return true;
+            }
+        }
     }
     return false;
 }

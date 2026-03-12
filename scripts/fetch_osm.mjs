@@ -78,19 +78,58 @@ function simplify(points, tolerance) {
     simplified.push(points[last]);
     return simplified;
 }
-
-function processCoords(coords) {
-    const simplified = simplify(coords, 0.005); 
-    return simplified.map(p => [p[1], p[0]]); // [lat, lng]
+function processCoords(arr) {
+    if (!arr || arr.length === 0) return arr;
+    
+    // Check if it's an array of segments (MultiLineString)
+    if (Array.isArray(arr[0][0])) {
+        return arr.map(segment => processCoords(segment)); // Recursive
+    }
+    
+    if (arr.length > 500) {
+        arr = simplify(arr, 0.005);
+    } else if (arr.length > 200) {
+        arr = simplify(arr, 0.002);
+    }
+    // Swap [lon, lat] to [lat, lon] for Leaflet
+    return arr.map(coord => [coord[1], coord[0]]);
 }
 
-function formatCoordsArray(coords) {
-    const arr = coords.map(p => `[${p[0].toFixed(4)}, ${p[1].toFixed(4)}]`);
-    const chunks = [];
-    for(let i=0; i<arr.length; i+=4) {
-        chunks.push('            ' + arr.slice(i, i+4).join(', '));
+function formatCoordsArray(arr) {
+    if (!arr || arr.length === 0) return '[]';
+    
+    // Check if it's MultiLineString (array of array of [lat, lng])
+    if (Array.isArray(arr[0][0])) {
+        let formatted = '[\n';
+        for (let j = 0; j < arr.length; j++) {
+            formatted += '            [\n';
+            let sub = arr[j];
+            let subStr = '                ';
+            for (let i = 0; i < sub.length; i++) {
+                subStr += `[${sub[i][0].toFixed(4)}, ${sub[i][1].toFixed(4)}]`;
+                if (i !== sub.length - 1) {
+                    subStr += ', ';
+                    if ((i + 1) % 4 === 0) subStr += '\n                ';
+                }
+            }
+            formatted += subStr + '\n            ]';
+            if (j !== arr.length - 1) formatted += ',\n';
+        }
+        formatted += '\n        ]';
+        return formatted;
     }
-    return `[\n${chunks.join(',\n')}\n        ]`;
+
+    // Existing logic for single array of coords
+    let formatted = '[\n            ';
+    for (let i = 0; i < arr.length; i++) {
+        formatted += `[${arr[i][0].toFixed(4)}, ${arr[i][1].toFixed(4)}]`;
+        if (i !== arr.length - 1) {
+            formatted += ', ';
+            if ((i + 1) % 4 === 0) formatted += '\n            ';
+        }
+    }
+    formatted += '\n        ]';
+    return formatted;
 }
 
 // Regex matching everything from "{ name" to the very first "}"
@@ -107,8 +146,14 @@ async function run() {
         const type = match[3];
         
         let country = '';
+        let origLat = 0;
+        let origLng = 0;
         const countryMatch = middle.match(/country:\s*"([^"]+)"/);
+        const latMatch = middle.match(/lat:\s*([0-9.-]+)/);
+        const lngMatch = middle.match(/lng:\s*([0-9.-]+)/);
         if (countryMatch) country = countryMatch[1];
+        if (latMatch) origLat = parseFloat(latMatch[1]);
+        if (lngMatch) origLng = parseFloat(lngMatch[1]);
         
         if (type === 'city') continue;
         
@@ -136,10 +181,20 @@ async function run() {
             if (data && data.length > 0) {
                 const validCategories = ['waterway', 'natural', 'water', 'boundary', 'leisure', 'place', 'landuse'];
                 // Only accept ways and relations, nodes are just points without true geometry boundaries
-                let filtered = data.filter(item => 
-                    item.osm_type !== 'node' && 
-                    (validCategories.includes(item.category) || item.type === 'river' || item.type === 'canal' || item.type === 'lake' || item.type === 'national_park')
-                );
+                let filtered = data.filter(item => {
+                    const isNode = item.osm_type === 'node';
+                    const isInvalidCat = !(validCategories.includes(item.category) || item.type === 'river' || item.type === 'canal' || item.type === 'lake' || item.type === 'national_park');
+                    if (isNode || isInvalidCat) return false;
+                    
+                    // Enforce Proximity check against Bounding Box
+                    if (origLat && origLng && item.boundingbox) {
+                        const [minLat, maxLat, minLon, maxLon] = item.boundingbox.map(Number);
+                        const isNearBox = origLat >= minLat - 2 && origLat <= maxLat + 2 &&
+                                          origLng >= minLon - 2 && origLng <= maxLon + 2;
+                        if (!isNearBox) return false;
+                    }
+                    return true;
+                });
                 
                 // Sort by bounding box size (diagonal distance) to get the largest possible representation 
                 // (e.g. the full river relation instead of a small local segment)
@@ -172,8 +227,8 @@ async function run() {
                     if (geo.type === 'LineString') {
                         coords = geo.coordinates;
                     } else if (geo.type === 'MultiLineString') {
-                        // Concatenate all segment arrays into one large array of [lng, lat] pairs
-                        coords = [].concat(...geo.coordinates);
+                        // Pass the array of arrays directly to create disconnected segments
+                        coords = geo.coordinates;
                     } else if (geo.type === 'Polygon') { 
                         coords = geo.coordinates[0];
                     } else if (geo.type === 'MultiPolygon') {
@@ -196,7 +251,10 @@ async function run() {
                 if (coords && coords.length > 0) {
                     const leafletCoords = processCoords(coords);
                     
-                    if (leafletCoords.length < 3 && key === 'area') {
+                    const isMulti = Array.isArray(leafletCoords[0][0]);
+                    const count = isMulti ? leafletCoords.reduce((acc, val) => acc + val.length, 0) : leafletCoords.length;
+
+                    if (count < 3 && key === 'area') {
                          console.log(`  -> Ignored (too few points after simplify): ${bestMatch.category}/${bestMatch.type}`);
                          newContent = newContent.replace(fullStr, cleanBase);
                          continue;
@@ -204,7 +262,7 @@ async function run() {
                     
                     const replacement = cleanBase.replace(' }', `,\n        ${key}: ${formatCoordsArray(leafletCoords)}\n    }`);
                     newContent = newContent.replace(fullStr, replacement);
-                    console.log(`  -> Added ${key} with ${leafletCoords.length} points (${bestMatch.category}/${bestMatch.type}).`);
+                    console.log(`  -> Added ${key} with ${count} points (${bestMatch.category}/${bestMatch.type}).`);
                 } else {
                     console.log(`  -> Invalid geom type: ${geo.type} (${bestMatch.category}/${bestMatch.type})`);
                     newContent = newContent.replace(fullStr, cleanBase);
